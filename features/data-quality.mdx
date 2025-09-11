@@ -1,0 +1,86 @@
+---
+title: Data Quality
+description: 'Monitor and ensure data quality'
+---
+
+# Data Quality
+
+Ensure your data meets quality standards with automated testing and monitoring.
+
+## Quality Dimensions
+
+### Completeness
+- Check for null values and missing data
+- Validate required fields are populated
+- Monitor data freshness and timeliness
+
+### Accuracy
+- Validate data against known sources
+- Check data format and type consistency
+- Verify business rule compliance
+
+### Consistency
+- Compare data across different systems
+- Check referential integrity
+- Validate data transformations
+
+### Uniqueness
+- Detect duplicate records
+- Validate primary key constraints
+- Monitor data deduplication processes
+
+## Built-in Tests
+
+<CardGroup cols={2}>
+  <Card title="Table Tests" icon="table">
+    Row count, freshness, and schema validation
+  </Card>
+  <Card title="Column Tests" icon="columns">
+    Null checks, uniqueness, and value ranges
+  </Card>
+  <Card title="Custom Tests" icon="code">
+    SQL-based tests for business rules
+  </Card>
+  <Card title="Great Expectations" icon="chart-line">
+    Integration with Great Expectations
+  </Card>
+</CardGroup>
+
+## Test Configuration
+
+```yaml
+tests:
+  - name: customer_id_not_null
+    testType: columnValuesToBeNotNull
+    columnName: customer_id
+  
+  - name: email_format_valid
+    testType: columnValuesToMatchRegex
+    columnName: email
+    regex: "^[\\w\\.-]+@[\\w\\.-]+\\.[a-zA-Z]{2,}$"
+  
+  - name: order_total_positive
+    testType: columnValuesToBeBetween
+    columnName: total_amount
+    minValue: 0
+    maxValue: 1000000
+```
+
+## Monitoring & Alerts
+
+### Quality Scores
+- Overall data quality score per table
+- Trend analysis over time
+- Quality score by test type
+
+### Alert Configuration
+- Email notifications for failed tests
+- Slack/Teams integration
+- Custom webhook notifications
+- Incident management integration
+
+### Quality Dashboard
+- Real-time quality metrics
+- Historical trend analysis
+- Test execution logs
+- Failed test details and resolution

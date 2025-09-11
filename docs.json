@@ -1,0 +1,72 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Collate Documentation",
+  "theme": "palm",
+  "logo": "/images/icons/collate-logo.svg",
+  "favicon": "/images/icons/favicon.ico",
+  "layout": "topnav",
+  "colors": {
+    "primary": "#cd3c4d",
+    "light": "#cd3c4d",
+    "dark": "#cd3c4d"
+  },
+  "appearance": {
+    "default": "light",
+    "strict": false
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "topbarLinks": [],
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "pages": ["index", "test", "main-concepts/overview"]
+      },
+      {
+        "tab": "Getting Started",
+        "pages": [
+          "getting-started/introduction",
+          "getting-started/overview"
+        ]
+      },
+      {
+        "tab": "Quick Start", 
+        "pages": [
+          "quick-start/index",
+          "quick-start/local-deployment"
+        ]
+      },
+      {
+        "tab": "Features",
+        "pages": [
+          "features/discovery",
+          "features/lineage",
+          "features/data-quality"
+        ]
+      },
+      {
+        "tab": "Connectors",
+        "pages": [
+          "connectors/overview",
+          "connectors/database/mysql",
+          "connectors/database/snowflake"
+        ]
+      },
+      {
+        "tab": "Deployment",
+        "pages": [
+          "deployment/overview",
+          "deployment/kubernetes"
+        ]
+      },
+      {
+        "tab": "Developers",
+        "pages": [
+          "developers/api"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+---
+title: Local Deployment
+description: 'Deploy OpenMetadata locally using Docker Compose'
+---
+
+# Local Deployment with Docker
+
+Deploy OpenMetadata locally using our Docker Compose setup.
+
+## System Requirements
+
+- **OS**: Linux, macOS, or Windows with WSL2
+- **Memory**: Minimum 8GB RAM
+- **Storage**: At least 20GB free space
+- **Docker**: Version 20.10.x or higher
+
+## Quick Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/open-metadata/OpenMetadata.git
+cd OpenMetadata
+
+# Run the setup script
+./docker/run_local_docker.sh
+```
+
+## Manual Setup
+
+If you prefer manual setup:
+
+```bash
+# Download docker-compose.yml
+curl -sL https://github.com/open-metadata/OpenMetadata/releases/latest/download/docker-compose.yml > docker-compose.yml
+
+# Start services
+docker-compose up -d
+```
+
+## Verify Installation
+
+1. **Web UI**: Open http://localhost:8585
+2. **Default Credentials**: 
+   - Username: `admin`
+   - Password: `admin`
+
+## Troubleshooting
+
+<Accordion title="Port already in use">
+If port 8585 is already in use, you can modify the port mapping in docker-compose.yml:
+
+```yaml
+services:
+  openmetadata-server:
+    ports:
+      - "8586:8585"  # Change to available port
+```
+</Accordion>
+
+<Accordion title="Memory issues">
+If you encounter memory issues:
+
+1. Increase Docker memory allocation to 8GB+
+2. Close unnecessary applications
+3. Consider using the lightweight deployment option
+</Accordion>

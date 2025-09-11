@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mint dev"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/open-metadata/docs-mintlify#readme",
   "dependencies": {
-    "react": "^19.1.1"
+    "react": "^19.1.1",
+    "mint": "4.2.108"
   }
 }

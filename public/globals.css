@@ -1,0 +1,476 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --top-nav-height: 70px;
+  --main-nav-height: 42px;
+  --side-nav-width: 288px;
+  --side-nav-collapsed-width: 42px;
+  --select-dropdown-default-height: 28px;
+  --select-dropdown-default-width: 165px;
+  --side-nav-width: min(20%, 300px);
+  --api-side-nav-width: max(14%, 220px);
+  --content-div-width: min(17%, 250px);
+  --default-border-color: #dce3ec;
+  --primary-color: #5469d4;
+  --primary-shadow-color: #5469d433;
+  --primary-background-color: rgba(84, 105, 212, 0.05);
+  --select-background-color: #f4f7ff;
+  --icon-background-color: #f1f3fe;
+  --select-border-color: #e9eefc;
+  --homepage-container-px: 130px;
+  --default-text-color: rgb(60, 66, 87);
+  --gray-text-color: rgba(60, 66, 87, 0.7);
+  --white-color: #fff;
+  --top-nav-color: #f7fafc;
+  --code-background-color: #212d63;
+  --code-gray-background-color: rgb(79, 86, 107);
+  --code-light-background-color: #f7fafc;
+  --code-toolbar-color: #212d63;
+  --code-gray-toolbar-color: #3c4257;
+  --code-light-toolbar-color: #ffffff;
+  --code-light-border-color: #e3e8ee;
+  --code-filename-color: #a4cdfe;
+  --code-gray-filename-color: #dadce1;
+  --code-light-filename-color: #f7fafc;
+  --code-block-text-color: #f5fbff;
+  --purple-bg-color: #7147e81a;
+  --green-bg-color: #0084761a;
+  --pink-bg-color: #b02aac1a;
+  --purple-icon-color: #7147e8;
+  --green-icon-color: #008376;
+  --pink-icon-color: #b02aac;
+  --beta-label-color: #0950C5;
+  --beta-label-bg-color: #E4EEFF;
+  --prod-label-color: #81C562;
+  --prod-label-bg-color: #EEFBE7;
+  --stable-label-color: #1890ff;
+  --stable-label-bg-color: #e6f7ff;
+  --connector-icon-bg-color: #F8F8F8;
+  --green-tag-color: #43A047;
+  --green-tag-bg-color: #43A0471A;
+  --orange-tag-color: #FF7C50;
+  --orange-tag-bg-color: #FF7C501A;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--default-text-color);
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 12px 0px 0px 0px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+li {
+  margin-top: 4px;
+}
+
+li::marker {
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: disc;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+ol {
+  list-style: decimal;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+ol li::marker {
+  color: var(--default-text-color);
+}
+
+li > ul {
+  margin-top: 0px;
+  margin-left: 16px;
+  list-style: circle;
+}
+
+ul li:first-child {
+  margin-top: 0;
+}
+
+pre {
+  border-radius: 6px;
+  background-color: var(--code-background-color);
+}
+
+pre,
+code {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar {
+  display: none;
+}
+
+.connector-tab {
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.connector-tab:hover {
+  background-color: var(--primary-background-color);
+}
+
+.active-connector {
+  border: 0.5px solid var(--select-border-color);
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.divider {
+  color: var(--default-border-color);
+}
+
+.icons {
+  height: 2rem;
+  width: 2rem;
+}
+
+.cloud-button {
+  border-radius: 1rem;
+  border: 1px solid rgb(194, 128, 255);
+  background-color: rgb(194, 128, 255);
+}
+.search-box {
+  height: 2.25rem;
+  width: 550px;
+  border: 1px solid #f4f4f4;
+  border-radius: 0.5rem;
+  background-color: #f4f4f4;
+  padding: 4px 20px;
+  color: #9e9d9d;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  width: 90%;
+  height: 90%;
+  border: none;
+  background-color: #f4f4f4;
+  outline: none;
+}
+
+.search-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+}
+
+.overview-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 10%;
+  background: #f4f7ff;
+}
+
+.overview-heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 42px;
+  margin-bottom: 12px;
+}
+
+.container-heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 42px;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.blogs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.homepage-containers {
+  padding: 0px 10%;
+  margin: 80px 0px 0px 0px;
+}
+
+#myUL {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+  color: var(--primary-color);
+}
+
+.DownArrow {
+  display: none;
+}
+
+.RightArrow {
+  display: block;
+}
+
+.highlightedCode {
+  background-color: #1a2652;
+}
+
+.page-404 {
+  height: calc(100vh - var(--top-nav-height) - var(--main-nav-height));
+}
+
+.content {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.non-collapsed-content {
+  width: calc(100vw - var(--side-nav-width));
+}
+
+.collapsed-content {
+  width: calc(100vw - var(--side-nav-collapsed-width));
+}
+
+.card-icon-container {
+  padding: 8px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.card-purple-icon {
+  background-color: var(--purple-bg-color);
+  border: 1px solid #7147e8;
+}
+
+.card-green-icon {
+  background-color: var(--green-bg-color);
+  border: 1px solid #008376;
+}
+
+.card-pink-icon {
+  background-color: var(--pink-bg-color);
+  border: 1px solid #b02aac;
+}
+
+.nav-bar-container {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.min-width-600 {
+  min-width: 600px;
+}
+
+@media (max-width: 1240px) {
+  .blogs-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blogs-container {
+    grid-template-columns: 1fr;
+  }
+  .overview-container {
+    padding: 20px 60px;
+    width: 100%;
+  }
+  .homepage-containers {
+    padding: 20px 60px;
+    margin: 32px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .non-collapsed-content {
+    display: none;
+  }
+  .collapsed-content {
+    width: calc(100% - 41px);
+  }
+}
+
+.api-page-container {
+  display: grid;
+  grid-template-columns: var(--api-side-nav-width) calc(
+      100vw - var(--api-side-nav-width)
+    );
+}
+
+.hash-link {
+  overflow: hidden;
+  width: 0px;
+  height: 0px;
+  display: block;
+  visibility: hidden;
+  text-decoration: none;
+  pointer-events: none;
+  /* Using the bellow approach to add a scrolling margin, 
+     Taking this approach as scroll-margin-top is ineffective due to a possible CSS bug
+     for custom web components mentioned here https://developer.mozilla.org/en-US/docs/Web/CSS/:target#examples*/
+  margin-top: -300px !important;
+  padding-top: 300px;
+}
+
+.cookie-modal {
+  position: fixed;
+  bottom: 0;
+  background-color: #F8FBFC;
+  z-index: 20;
+  padding: 1rem;
+  box-shadow: var(--shadow-card); 
+  transform: translateY(100%); 
+  transition: transform 1.2s ease-in-out, visibility 1.2s ease-in-out;
+  visibility: hidden;
+  border: 1px solid rgb(201, 196, 196);
+  border-radius: 10px;
+}
+
+.cookie-modal p {
+  color: #292929;
+  font-weight: 300;
+}
+
+.cookie-modal-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.button {
+  border-radius: 1.5rem;
+  padding: 0.5rem 2rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+}
+
+.button-accept {
+  background-color: #7147E8;
+  color: white;
+}
+
+.button-reject {
+  background-color: white;
+  color: #7147E8;
+  border: 1px solid #7147E8;
+}
+
+@media (min-width: 640px) {
+  .cookie-modal {
+    margin: 1.25rem;
+    max-width: 36rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cookie-modal {
+    max-width: 48rem;
+  }
+}
+
+.cookie-modal.visible {
+  transform: translateY(0); 
+  visibility: visible;
+}
+
+.brand-docs-banner{
+  font-weight: 500;
+  padding: 0px 8px;
+  border-radius: 12px;
+  margin-top: 16px;
+  width: fit-content;
+}
+
+.brand-docs-banner+article> h1:first-child{
+  margin-top: 8px;
+}

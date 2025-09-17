@@ -1,0 +1,364 @@
+---
+title: API Authentication
+description: 'Configure authentication methods for secure access to Collate APIs, including basic auth, JWT tokens, and SSO integration.'
+---
+
+# API Authentication
+
+Collate provides multiple authentication methods to secure API access. Choose the appropriate method based on your deployment environment and security requirements.
+
+## Authentication Methods
+
+Collate supports the following authentication providers:
+
+- **Basic Authentication**: Username/password login for development and internal use
+- **JWT Tokens**: Token-based authentication for service accounts and automation
+- **SSO Integration**: Enterprise authentication with OIDC, OAuth 2.0, SAML
+- **Custom OIDC**: Custom OpenID Connect providers
+
+## Basic Authentication
+
+Out of the box, Collate comes with username and password authentication.
+
+### Default Credentials
+
+The default login credentials are:
+
+```bash
+Username: admin@open-metadata.org
+Password: admin
+```
+
+<Accordion title="Security Requirements for Production">
+Security requirements for your **production** environment:
+- **DELETE** the admin default account shipped by OM
+- **UPDATE** the Private/Public keys used for JWT Tokens
+- **CHANGE** default passwords for all admin accounts
+</Accordion>
+
+### Custom Domain Configuration
+
+When using a custom domain, configure the principal domain:
+
+```yaml
+authorizerConfiguration:
+  adminPrincipals: [admin]
+  principalDomain: "yourdomain.com"
+```
+
+With this setup, the default username becomes `admin@yourdomain.com`.
+
+### Basic Auth Configuration
+
+Update your `collate.yaml` configuration:
+
+```yaml
+authenticationConfiguration:
+  provider: basic
+  publicKeyUrls: ["https://your-domain.com/api/v1/system/config/jwks"]
+  authority: "https://your-domain.com"
+  enableSelfSignup: true
+
+authorizerConfiguration:
+  adminPrincipals: ["admin"]
+  allowedEmailRegistrationDomains: ["yourdomain.com"]
+  principalDomain: "yourdomain.com"
+```
+
+#### Configuration Parameters
+
+- **`provider`**: Set to `basic` for username/password authentication
+- **`publicKeyUrls`**: JWKS endpoint for token validation
+- **`authority`**: Your domain for token validation
+- **`enableSelfSignup`**: Allow users to self-register
+- **`adminPrincipals`**: Bootstrap admin usernames (comma-separated)
+- **`allowedEmailRegistrationDomains`**: Allowed domains for registration
+- **`principalDomain`**: Domain for user email addresses
+
+### Admin User Setup
+
+Admin users can be bootstrapped in two ways:
+
+**With SMTP enabled:**
+```yaml
+adminPrincipals: ["admin1", "admin2", "admin3"]
+```
+Random passwords are generated and sent to `adminName@principalDomain`.
+
+**Without SMTP:**
+```yaml
+adminPrincipals: ["admin1", "admin2", "admin3"]
+```
+Default password is `admin` for all users. Change passwords after first login via Settings > Members > Admins.
+
+## JWT Token Authentication
+
+JWT tokens provide secure authentication for automated systems and service accounts.
+
+### Enable JWT Tokens
+
+JWT tokens are required when SSO is enabled or for service account access.
+
+<Accordion title="Production Security Requirements">
+For production environments:
+- Generate new private/public key pairs
+- Never use default keys in production
+- Store keys securely with proper permissions
+- Use unique JWT issuer and key ID
+</Accordion>
+
+### Generate Key Pairs
+
+#### For Development/Testing
+
+Use the default configuration or generate new keys.
+
+#### For Production
+
+Generate private/public key pairs:
+
+```bash
+# Generate private key
+openssl genrsa -out private_key.pem 2048
+
+# Convert to DER format
+openssl pkcs8 -topk8 -inform PEM -outform DER -in private_key.pem -out private_key.der -nocrypt
+
+# Generate public key
+openssl rsa -in private_key.pem -pubout -outform DER -out public_key.der
+```
+
+Copy the `.der` files to your Collate server `conf` directory with proper permissions.
+
+### JWT Configuration
+
+Add JWT configuration to your `collate.yaml`:
+
+```yaml
+jwtTokenConfiguration:
+  rsapublicKeyFilePath: "/opt/collate/conf/public_key.der"
+  rsaprivateKeyFilePath: "/opt/collate/conf/private_key.der"
+  jwtissuer: "your-domain.com"
+  keyId: "unique-uuid-here"
+```
+
+#### Environment Variables
+
+```bash
+RSA_PUBLIC_KEY_FILE_PATH="/opt/collate/conf/public_key.der"
+RSA_PRIVATE_KEY_FILE_PATH="/opt/collate/conf/private_key.der"
+JWT_ISSUER="your-domain.com"
+JWT_KEY_ID="c8ec220c-be7d-4e47-97c7-098bf6a57ce1"
+```
+
+### Update Authentication Configuration
+
+Add the JWKS endpoint to your authentication configuration:
+
+```yaml
+authenticationConfiguration:
+  provider: "your-sso-provider"
+  publicKeyUrls:
+    - "https://your-sso-provider.com/jwks"
+    - "https://your-domain.com/api/v1/system/config/jwks"
+  authority: "https://your-sso-provider.com"
+  clientId: "your-client-id"
+  callbackUrl: "https://your-domain.com/callback"
+```
+
+### Generate Tokens
+
+After configuration and server restart:
+
+1. Navigate to **Settings > Bots** in the Collate UI
+2. Click on the `ingestion-bot`
+3. Generate or revoke JWT tokens as needed
+4. Securely store the generated token
+
+### Token Usage
+
+Use the JWT token in your ingestion workflows:
+
+```yaml
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: "https://your-domain.com/api"
+    authProvider: "collate"
+    securityConfig:
+      jwtToken: "your-jwt-token-here"
+```
+
+## Docker Deployment
+
+### Volume Mapping
+
+Add volume mapping to your `docker-compose.yml`:
+
+```yaml
+services:
+  collate-server:
+    volumes:
+      - ./docker-volume/jwtkeys:/etc/collate/jwtkeys
+```
+
+### Environment Configuration
+
+Create a `.env` file:
+
+```bash
+# collate.prod.env
+RSA_PUBLIC_KEY_FILE_PATH="/etc/collate/jwtkeys/public_key.der"
+RSA_PRIVATE_KEY_FILE_PATH="/etc/collate/jwtkeys/private_key.der"
+JWT_ISSUER="your-domain.com"
+JWT_KEY_ID="c8ec220c-be7d-4e47-97c7-098bf6a57ce1"
+```
+
+### Start Services
+
+```bash
+docker compose -f docker-compose.yml --env-file collate.prod.env up -d
+```
+
+## Kubernetes Deployment
+
+### Create Secrets
+
+Create Kubernetes secrets for key pairs:
+
+```bash
+kubectl create secret generic collate-jwt-keys \
+  --from-file private_key.der \
+  --from-file public_key.der \
+  --namespace default
+```
+
+### Helm Configuration
+
+Update your Helm values:
+
+```yaml
+# collate.prod.values.yml
+collate:
+  config:
+    jwtTokenConfiguration:
+      rsapublicKeyFilePath: "/etc/collate/jwtkeys/public_key.der"
+      rsaprivateKeyFilePath: "/etc/collate/jwtkeys/private_key.der"
+      jwtissuer: "your-domain.com"
+      keyId: "c8ec220c-be7d-4e47-97c7-098bf6a57ce1"
+
+extraVolumes:
+  - name: collate-jwt-vol
+    secret:
+      secretName: collate-jwt-keys
+
+extraVolumeMounts:
+  - name: collate-jwt-vol
+    mountPath: "/etc/collate/jwtkeys"
+    readOnly: true
+```
+
+### Deploy/Upgrade
+
+```bash
+helm upgrade --install collate open-metadata/collate \
+  --values collate.prod.values.yml
+```
+
+## API Access Examples
+
+### Using Basic Authentication
+
+```bash
+# Get access token
+curl -X POST "https://your-domain.com/api/v1/users/login" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "admin@yourdomain.com",
+    "password": "your-password"
+  }'
+```
+
+### Using JWT Token
+
+```bash
+# API call with JWT token
+curl -X GET "https://your-domain.com/api/v1/tables" \
+  -H "Authorization: Bearer your-jwt-token"
+```
+
+### Python SDK Authentication
+
+```python
+from metadata.generated.schema.entity.services.connections.metadata.openMetadataConnection import (
+    CollateConnection,
+)
+from metadata.generated.schema.security.client.openMetadataJWTClientConfig import (
+    CollateJWTClientConfig,
+)
+from metadata.ingestion.ometa.ometa_api import Collate
+
+# JWT Authentication
+server_config = CollateConnection(
+    hostPort="https://your-domain.com/api",
+    authProvider="collate",
+    securityConfig=CollateJWTClientConfig(
+        jwtToken="your-jwt-token"
+    ),
+)
+
+metadata = Collate(server_config)
+```
+
+### Java SDK Authentication
+
+```java
+import org.collate.client.CollateClient;
+import org.collate.client.auth.JWTAuthProvider;
+
+// JWT Authentication
+CollateClient client = CollateClient.builder()
+    .baseUrl("https://your-domain.com/api")
+    .authProvider(new JWTAuthProvider("your-jwt-token"))
+    .build();
+```
+
+## Network Connectivity
+
+Ensure the JWKS URL is reachable from your Collate server:
+
+```bash
+# Test JWKS endpoint connectivity
+wget -O - https://your-domain.com/api/v1/system/config/jwks
+```
+
+## Best Practices
+
+1. **Key Management**: Store private keys securely with restricted permissions
+2. **Token Rotation**: Regularly rotate JWT tokens and keys
+3. **Environment Separation**: Use different keys for different environments
+4. **Monitoring**: Monitor authentication failures and token usage
+5. **Backup**: Maintain secure backups of your key pairs
+6. **Principle of Least Privilege**: Grant minimal required permissions
+
+## Troubleshooting
+
+<Accordion title="Token validation failed">
+- Verify JWT configuration is correct
+- Check that JWKS endpoint is reachable
+- Ensure key files have proper permissions
+- Validate token expiration and signature
+</Accordion>
+
+<Accordion title="JWKS endpoint unreachable">
+- Test connectivity from Collate server
+- Check firewall and network rules
+- Verify URL format and accessibility
+- Ensure SSL certificates are valid
+</Accordion>
+
+<Accordion title="Authentication provider errors">
+- Verify provider configuration matches your setup
+- Check SSO provider settings and credentials
+- Validate callback URLs and domain settings
+- Review logs for specific error messages
+</Accordion>

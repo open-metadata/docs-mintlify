@@ -1,11 +1,11 @@
 ---
 title: Local Deployment
-description: 'Deploy OpenMetadata locally using Docker Compose'
+description: 'Deploy Collate locally using Docker Compose'
 ---
 
 # Local Deployment with Docker
 
-Deploy OpenMetadata locally using our Docker Compose setup.
+Deploy Collate locally using our Docker Compose setup.
 
 ## System Requirements
 
@@ -18,8 +18,8 @@ Deploy OpenMetadata locally using our Docker Compose setup.
 
 ```bash
 # Clone the repository
-git clone https://github.com/open-metadata/OpenMetadata.git
-cd OpenMetadata
+git clone https://github.com/open-metadata/Collate.git
+cd Collate
 
 # Run the setup script
 ./docker/run_local_docker.sh
@@ -31,7 +31,7 @@ If you prefer manual setup:
 
 ```bash
 # Download docker-compose.yml
-curl -sL https://github.com/open-metadata/OpenMetadata/releases/latest/download/docker-compose.yml > docker-compose.yml
+curl -sL https://github.com/open-metadata/Collate/releases/latest/download/docker-compose.yml > docker-compose.yml
 
 # Start services
 docker-compose up -d
@@ -51,7 +51,7 @@ If port 8585 is already in use, you can modify the port mapping in docker-compos
 
 ```yaml
 services:
-  openmetadata-server:
+  collate-server:
     ports:
       - "8586:8585"  # Change to available port
 ```

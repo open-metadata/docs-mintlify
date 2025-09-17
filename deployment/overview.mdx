@@ -1,6 +1,6 @@
 ---
 title: Deployment Overview
-description: 'Production deployment options for OpenMetadata'
+description: 'Production deployment options for Collate'
 ---
 
 # Deployment Overview
@@ -43,7 +43,7 @@ Choose the right deployment option for your organization's needs.
 
 ```mermaid
 graph TB
-    LB[Load Balancer] --> OM[OpenMetadata Server]
+    LB[Load Balancer] --> OM[Collate Server]
     OM --> DB[(MySQL/PostgreSQL)]
     OM --> ES[(Elasticsearch)]
     OM --> AM[Airflow]

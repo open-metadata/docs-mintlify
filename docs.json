@@ -12,7 +12,7 @@
   },
   "appearance": {
     "default": "light",
-    "strict": false
+    "strict": true
   },
   "styling": {
     "eyebrows": "breadcrumbs"

@@ -1,32 +1,32 @@
 ---
 title: MySQL Connector
-description: 'Connect OpenMetadata to MySQL databases'
+description: 'Connect Collate to MySQL databases'
 ---
 
 # MySQL Connector
 
-Connect OpenMetadata to your MySQL databases to extract metadata, lineage, and usage information.
+Connect Collate to your MySQL databases to extract metadata, lineage, and usage information.
 
 ## Prerequisites
 
 - MySQL 5.7 or higher
 - User with appropriate permissions
-- Network connectivity from OpenMetadata to MySQL
+- Network connectivity from Collate to MySQL
 
 ## Required Permissions
 
-Create a dedicated user for OpenMetadata:
+Create a dedicated user for Collate:
 
 ```sql
-CREATE USER 'openmetadata_user'@'%' IDENTIFIED BY 'strong_password';
+CREATE USER 'collate_user'@'%' IDENTIFIED BY 'strong_password';
 
-GRANT SELECT ON *.* TO 'openmetadata_user'@'%';
-GRANT SELECT ON INFORMATION_SCHEMA.* TO 'openmetadata_user'@'%';
-GRANT SELECT ON PERFORMANCE_SCHEMA.* TO 'openmetadata_user'@'%';
+GRANT SELECT ON *.* TO 'collate_user'@'%';
+GRANT SELECT ON INFORMATION_SCHEMA.* TO 'collate_user'@'%';
+GRANT SELECT ON PERFORMANCE_SCHEMA.* TO 'collate_user'@'%';
 
 -- For lineage extraction
-GRANT SELECT ON mysql.slow_log TO 'openmetadata_user'@'%';
-GRANT SELECT ON mysql.general_log TO 'openmetadata_user'@'%';
+GRANT SELECT ON mysql.slow_log TO 'collate_user'@'%';
+GRANT SELECT ON mysql.general_log TO 'collate_user'@'%';
 ```
 
 ## Configuration
@@ -41,7 +41,7 @@ source:
     config:
       type: Mysql
       hostPort: mysql.company.com:3306
-      username: openmetadata_user
+      username: collate_user
       password: strong_password
       database: employees
 ```
@@ -56,7 +56,7 @@ source:
     config:
       type: Mysql
       hostPort: mysql.company.com:3306
-      username: openmetadata_user
+      username: collate_user
       password: strong_password
       database: employees
       connectionOptions:
@@ -106,7 +106,7 @@ telnet mysql.company.com 3306
 Verify user permissions:
 
 ```sql
-SHOW GRANTS FOR 'openmetadata_user'@'%';
+SHOW GRANTS FOR 'collate_user'@'%';
 ```
 </Accordion>
 
@@ -114,6 +114,6 @@ SHOW GRANTS FOR 'openmetadata_user'@'%';
 Verify SSL certificates and configuration:
 
 ```bash
-mysql --ssl-mode=REQUIRED -h mysql.company.com -u openmetadata_user -p
+mysql --ssl-mode=REQUIRED -h mysql.company.com -u collate_user -p
 ```
 </Accordion>

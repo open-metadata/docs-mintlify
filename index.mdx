@@ -1,28 +1,49 @@
 ---
-title: 'Collate Documentation'
-description: 'Unified platform for data discovery, lineage, and governance'
+title: "Collate Documentation"
+description: "Unified platform for data discovery, lineage, and governance"
+mode: "custom"
 ---
 
-## Get Started
+import { TopBanner } from "/snippets/Homepage/TopBanner.jsx";
+
+<div className="homepage-banner">
+
+<div className="container banner-content">
+
+<h1 className="page-header">
+  Collate <span>Documentation</span>
+</h1>
+
+<p className="page-description">
+  Unlock the value of data assets with an end-to-end metadata management
+  solution that includes data discovery, governance, data quality,
+  observability, and people collaboration.
+</p>
+
+<TopBanner />
+
+</div>
+
+</div>
+
+<div style={{ padding: '50px 70px' }}>
+
+<h2 className="overview">Overview</h2>
+
+<p>Collate is a unified platform for discovery, observability, and governance powered by a central metadata repository, in-depth lineage, and seamless team collaboration. It is one of the fastest-growing open-source projects with a vibrant community and adoption by a diverse set of companies in a variety of industry verticals. Based on Collate Standards and APIs, supporting connectors to a wide range of data services, Collate enables end-to-end metadata management, giving you the freedom to unlock the value of your data assets.</p>
+
+<h2 className="overview" style={{ marginTop: '36px' }}>Get Started</h2>
 
 <CardGroup cols={2}>
-  <Card
-    title="Quick Start"
-    icon="rocket"
-    href="/quick-start/index"
-  >
-    Deploy OpenMetadata locally in 5 minutes
+  <Card title="Quick Start" icon="rocket" href="/quick-start/index">
+    Deploy Collate locally in 5 minutes
   </Card>
-  <Card
-    title="Connect Data Sources"
-    icon="plug"
-    href="/connectors/overview"
-  >
+  <Card title="Connect Data Sources" icon="plug" href="/connectors/overview">
     Connect your databases, pipelines, and dashboards
   </Card>
 </CardGroup>
 
-## Core Features
+<h2 className="overview" style={{ marginTop: '36px' }}>Core Features</h2>
 
 <CardGroup cols={2}>
   <Card
@@ -32,18 +53,10 @@ description: 'Unified platform for data discovery, lineage, and governance'
   >
     Find and understand your data assets across the organization
   </Card>
-  <Card
-    title="Data Lineage"
-    icon="share-nodes"
-    href="/features/lineage"
-  >
+  <Card title="Data Lineage" icon="share-nodes" href="/features/lineage">
     Track data flow from source to destination
   </Card>
-  <Card
-    title="Data Quality"
-    icon="shield-check"
-    href="/features/data-quality"
-  >
+  <Card title="Data Quality" icon="shield-check" href="/features/data-quality">
     Monitor and ensure data quality with automated tests
   </Card>
   <Card
@@ -55,9 +68,4 @@ description: 'Unified platform for data discovery, lineage, and governance'
   </Card>
 </CardGroup>
 
-## Why OpenMetadata?
-
-- **Unified Platform**: Single place for all your metadata needs
-- **Open Source**: Community-driven and extensible
-- **API-First**: Programmatic access to all functionality
-- **Enterprise Ready**: Scalable, secure, and production-ready
+</div>

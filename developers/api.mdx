@@ -1,11 +1,11 @@
 ---
 title: REST API
-description: 'Interact with OpenMetadata programmatically'
+description: 'Interact with Collate programmatically'
 ---
 
 # REST API
 
-OpenMetadata provides comprehensive REST APIs for programmatic access to all metadata operations.
+Collate provides comprehensive REST APIs for programmatic access to all metadata operations.
 
 ## Authentication
 
@@ -16,23 +16,23 @@ Generate an API key from the Settings page:
 ```bash
 # Using API key in header
 curl -H "Authorization: Bearer <api-key>" \
-     https://openmetadata.company.com/api/v1/tables
+     https://collate.company.com/api/v1/tables
 ```
 
 ### JWT Token
 
 ```bash
 # Get JWT token
-curl -X POST https://openmetadata.company.com/api/v1/auth/login \
+curl -X POST https://collate.company.com/api/v1/auth/login \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "admin@openmetadata.org",
+    "email": "admin@collate.org",
     "password": "admin"
   }'
 
 # Use token
 curl -H "Authorization: Bearer <jwt-token>" \
-     https://openmetadata.company.com/api/v1/tables
+     https://collate.company.com/api/v1/tables
 ```
 
 ## Core Endpoints
@@ -41,17 +41,17 @@ curl -H "Authorization: Bearer <jwt-token>" \
 
 <CodeGroup>
 ```bash Get All Tables
-curl https://openmetadata.company.com/api/v1/tables \
+curl https://collate.company.com/api/v1/tables \
   -H "Authorization: Bearer <token>"
 ```
 
 ```bash Get Table by ID
-curl https://openmetadata.company.com/api/v1/tables/{id} \
+curl https://collate.company.com/api/v1/tables/{id} \
   -H "Authorization: Bearer <token>"
 ```
 
 ```bash Create Table
-curl -X POST https://openmetadata.company.com/api/v1/tables \
+curl -X POST https://collate.company.com/api/v1/tables \
   -H "Authorization: Bearer <token>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -77,11 +77,11 @@ curl -X POST https://openmetadata.company.com/api/v1/tables \
 
 ```bash
 # Search across all assets
-curl "https://openmetadata.company.com/api/v1/search/query?q=users&index=table_search_index" \
+curl "https://collate.company.com/api/v1/search/query?q=users&index=table_search_index" \
   -H "Authorization: Bearer <token>"
 
 # Advanced search with filters
-curl -X POST https://openmetadata.company.com/api/v1/search/query \
+curl -X POST https://collate.company.com/api/v1/search/query \
   -H "Authorization: Bearer <token>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -97,11 +97,11 @@ curl -X POST https://openmetadata.company.com/api/v1/search/query \
 
 ```bash
 # Get table lineage
-curl https://openmetadata.company.com/api/v1/lineage/table/{table-id}?upstreamDepth=3&downstreamDepth=3 \
+curl https://collate.company.com/api/v1/lineage/table/{table-id}?upstreamDepth=3&downstreamDepth=3 \
   -H "Authorization: Bearer <token>"
 
 # Add lineage edge
-curl -X PUT https://openmetadata.company.com/api/v1/lineage \
+curl -X PUT https://collate.company.com/api/v1/lineage \
   -H "Authorization: Bearer <token>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -123,24 +123,24 @@ curl -X PUT https://openmetadata.company.com/api/v1/lineage \
 ### Python SDK
 
 ```python
-from metadata.generated.schema.entity.services.connections.metadata.openMetadataConnection import (
-    OpenMetadataConnection,
+from metadata.generated.schema.entity.services.connections.metadata.collateConnection import (
+    CollateConnection,
 )
-from metadata.generated.schema.security.client.openMetadataJWTClientConfig import (
-    OpenMetadataJWTClientConfig,
+from metadata.generated.schema.security.client.collateJWTClientConfig import (
+    CollateJWTClientConfig,
 )
-from metadata.ingestion.ometa.ometa_api import OpenMetadata
+from metadata.ingestion.ometa.ometa_api import Collate
 
 # Initialize client
-server_config = OpenMetadataConnection(
+server_config = CollateConnection(
     hostPort="http://localhost:8585/api",
-    authProvider="openmetadata",
-    securityConfig=OpenMetadataJWTClientConfig(
+    authProvider="collate",
+    securityConfig=CollateJWTClientConfig(
         jwtToken="your-jwt-token"
     ),
 )
 
-metadata = OpenMetadata(server_config)
+metadata = Collate(server_config)
 
 # Get all tables
 tables = metadata.list_all_entities(entity=Table)

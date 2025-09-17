@@ -1,11 +1,11 @@
 ---
 title: Kubernetes Deployment
-description: 'Deploy OpenMetadata on Kubernetes'
+description: 'Deploy Collate on Kubernetes'
 ---
 
 # Kubernetes Deployment
 
-Deploy OpenMetadata on Kubernetes for production-grade scalability and reliability.
+Deploy Collate on Kubernetes for production-grade scalability and reliability.
 
 ## Prerequisites
 
@@ -26,20 +26,20 @@ helm repo update
 ### Install with Default Values
 
 ```bash
-helm install openmetadata open-metadata/openmetadata
+helm install collate open-metadata/collate
 ```
 
 ### Install with Custom Values
 
 ```bash
 # Download values file
-curl -sL https://raw.githubusercontent.com/open-metadata/openmetadata-helm-charts/main/charts/openmetadata/values.yaml > values.yaml
+curl -sL https://raw.githubusercontent.com/open-metadata/collate-helm-charts/main/charts/collate/values.yaml > values.yaml
 
 # Edit values.yaml as needed
 vim values.yaml
 
 # Install
-helm install openmetadata open-metadata/openmetadata -f values.yaml
+helm install collate open-metadata/collate -f values.yaml
 ```
 
 ## Configuration
@@ -48,13 +48,13 @@ helm install openmetadata open-metadata/openmetadata -f values.yaml
 
 ```yaml
 # values.yaml
-openmetadata:
+collate:
   config:
     database:
       host: mysql.default.svc.cluster.local
       port: 3306
-      databaseName: openmetadata_db
-      username: openmetadata_user
+      databaseName: collate_db
+      username: collate_user
       password: secure_password
     
     elasticsearch:
@@ -85,8 +85,8 @@ resources:
 postgresql:
   enabled: true
   auth:
-    database: openmetadata_db
-    username: openmetadata_user
+    database: collate_db
+    username: collate_user
     password: secure_password
   primary:
     persistence:
@@ -147,14 +147,14 @@ ingress:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
   hosts:
-    - host: openmetadata.company.com
+    - host: collate.company.com
       paths:
         - path: /
           pathType: Prefix
   tls:
-    - secretName: openmetadata-tls
+    - secretName: collate-tls
       hosts:
-        - openmetadata.company.com
+        - collate.company.com
 ```
 
 ## Monitoring and Observability
@@ -199,7 +199,7 @@ readinessProbe:
 Check pod logs:
 
 ```bash
-kubectl logs -f deployment/openmetadata
+kubectl logs -f deployment/collate
 kubectl describe pod <pod-name>
 ```
 </Accordion>
@@ -208,7 +208,7 @@ kubectl describe pod <pod-name>
 Verify database connectivity:
 
 ```bash
-kubectl exec -it deployment/openmetadata -- nc -zv mysql.default.svc.cluster.local 3306
+kubectl exec -it deployment/collate -- nc -zv mysql.default.svc.cluster.local 3306
 ```
 </Accordion>
 
@@ -217,6 +217,6 @@ Check ingress status:
 
 ```bash
 kubectl get ingress
-kubectl describe ingress openmetadata
+kubectl describe ingress collate
 ```
 </Accordion>

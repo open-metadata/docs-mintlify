@@ -22,17 +22,23 @@
     "tabs": [
       {
         "tab": "Home",
-        "pages": ["index", "test", "main-concepts/overview"]
+        "pages": ["index"]
       },
       {
         "tab": "Getting Started",
         "pages": [
-          "getting-started/introduction",
-          "getting-started/overview"
+          "getting-started/overview",
+          "getting-started/introduction"
         ]
       },
       {
-        "tab": "Quick Start", 
+        "tab": "Main Concepts",
+        "pages": [
+          "main-concepts/overview"
+        ]
+      },
+      {
+        "tab": "Quick Start",
         "pages": [
           "quick-start/index",
           "quick-start/local-deployment"
@@ -42,16 +48,8 @@
         "tab": "Features",
         "pages": [
           "features/discovery",
-          "features/lineage",
-          "features/data-quality"
-        ]
-      },
-      {
-        "tab": "Connectors",
-        "pages": [
-          "connectors/overview",
-          "connectors/database/mysql",
-          "connectors/database/snowflake"
+          "features/data-quality",
+          "features/lineage"
         ]
       },
       {
@@ -59,6 +57,54 @@
         "pages": [
           "deployment/overview",
           "deployment/kubernetes"
+        ]
+      },
+      {
+        "tab": "Connectors",
+        "pages": [
+          "connectors/overview",
+          {
+            "group": "Database Connectors",
+            "pages": [
+              "connectors/database/overview",
+              "connectors/database/mysql",
+              "connectors/database/postgres",
+              "connectors/database/snowflake",
+              "connectors/database/bigquery",
+              "connectors/database/redshift"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Security",
+        "pages": [
+          "security/overview",
+          {
+            "group": "SSO Authentication",
+            "pages": [
+              "security/sso/azure",
+              "security/sso/google",
+              "security/sso/auth0",
+              "security/sso/okta"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API & SDKs",
+        "pages": [
+          "api/overview",
+          "api/authentication",
+          {
+            "group": "SDKs",
+            "pages": [
+              "sdk/overview",
+              "sdk/python/overview",
+              "sdk/python/api-reference",
+              "sdk/java/overview"
+            ]
+          }
         ]
       },
       {

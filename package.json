@@ -1,8 +1,8 @@
 {
-  "name": "react",
+  "name": "mintlify-docs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Use the starter kit to get your docs deployed and ready to customize.",
+  "main": "index.mdx",
   "directories": {
     "doc": "docs"
   },
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/open-metadata/docs-mintlify.git"
+    "url": "git+https://github.com/sweta1308/mintlify-docs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/open-metadata/docs-mintlify/issues"
+    "url": "https://github.com/sweta1308/mintlify-docs/issues"
   },
-  "homepage": "https://github.com/open-metadata/docs-mintlify#readme",
+  "homepage": "https://github.com/sweta1308/mintlify-docs#readme",
   "dependencies": {
     "react": "^19.1.1",
     "mint": "4.2.108"

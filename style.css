@@ -1,0 +1,50 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.homepage-banner {
+    background: linear-gradient(90deg, rgba(206, 240, 255, 0.3), rgba(228, 206, 255, 0.3), rgba(255, 255, 255, 0.3));;
+}
+
+.banner-content {
+    padding: 50px 60px;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: #404b73;
+}
+
+.page-header span {
+    color: #007e99;
+}
+
+.page-description {
+    text-align: center;
+    font-size: 20px;
+    color: #3C4257;
+    margin: 12px auto 0;
+    max-width: 65%;
+}
+
+.overview {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 42px;
+    color: rgb(45, 44, 44);
+    margin-bottom: 12px;
+}
+
+@media (max-width: 1024px) {
+    .banner-content {
+        padding: 30px;
+        padding-top: 140px;
+    }
+
+    .page-description {
+        max-width: 100%;
+    }
+}

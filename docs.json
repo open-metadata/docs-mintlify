@@ -105,13 +105,6 @@
                         ]
                     },
                     {
-                        "group": "API Connectors",
-                        "pages": [
-                            "connectors/api/overview",
-                            "connectors/api/rest-api"
-                        ]
-                    },
-                    {
                         "group": "Dashboard Connectors",
                         "pages": [
                             "connectors/dashboard/overview",
@@ -153,6 +146,7 @@
                     {
                         "group": "Pipeline Connectors",
                         "pages": [
+                            "connectors/pipeline/overview",
                             "connectors/pipeline/airflow",
                             "connectors/pipeline/datafactory",
                             "connectors/pipeline/dagster",
@@ -172,6 +166,150 @@
                             "connectors/pipeline/stitch",
                             "connectors/pipeline/wherescape"
                         ]
+                    },
+                    {
+                        "group": "ML Model Connectors",
+                        "pages": [
+                            "connectors/ml-model",
+                            "connectors/ml-model/mlflow",
+                            "connectors/ml-model/sagemaker",
+                            "connectors/ml-model/vertexai"
+                        ]
+                    },
+                    {
+                        "group": "Security Connectors",
+                        "pages": [
+                            "connectors/security/overview",
+                            "connectors/security/ranger"
+                        ]
+                    },
+                    {
+                        "group": "Storage Connectors",
+                        "pages": [
+                            "connectors/storage/overview",
+                            "connectors/storage/adls",
+                            "connectors/storage/gcs",
+                            "connectors/storage/s3"
+                        ]
+                    },
+                    {
+                        "group": "Search Connectors",
+                        "pages": [
+                            "connectors/search/overview",
+                            "connectors/search/elasticsearch",
+                            "connectors/search/opensearch"
+                        ]
+                    },
+                    {
+                        "group": "Metadata Connectors",
+                        "pages": [
+                            "connectors/metadata/overview",
+                            "connectors/metadata/alation",
+                            "connectors/metadata/alationsink",
+                            "connectors/metadata/amundsen"
+                        ]
+                    },
+                    {
+                        "group": "Custom Connectors",
+                        "pages": [
+                            "connectors/custom-connectors/overview"
+                        ]
+                    },
+                    {
+                            "group": "Ingestion",
+                            "pages": [
+                            "connectors/ingestion",
+                            {
+                            "group": "Workflows",
+                            "pages": [
+                            "connectors/ingestion/workflows",
+                            {
+                            "group": "Metadata",
+                            "pages": [
+                            "connectors/ingestion/workflows/metadata",
+                            {
+                            "group": "Filter Patterns",
+                            "pages": [
+                            "connectors/ingestion/workflows/metadata/filter-patterns",
+                            "connectors/ingestion/workflows/metadata/filter-patterns/database"
+                        ]
+                    },
+                    {
+                            "group": "Incremental Extraction",
+                            "pages": [
+                            "connectors/ingestion/workflows/metadata/incremental-extraction",
+                            "connectors/ingestion/workflows/metadata/incremental-extraction/bigquery",
+                            "connectors/ingestion/workflows/metadata/incremental-extraction/redshift",
+                            "connectors/ingestion/workflows/metadata/incremental-extraction/snowflake"
+                            ]
+                            },
+                            "connectors/ingestion/workflows/metadata/multithreading"
+                        ]
+                    },
+                    {
+                            "group": "Usage",
+                            "pages": [
+                            "connectors/ingestion/workflows/usage",
+                            "connectors/ingestion/workflows/usage/usage-workflow-query-logs",
+                            "connectors/ingestion/workflows/usage/filter-query-set"
+                        ]
+                    },
+                    {
+                            "group": "Lineage",
+                            "pages": [
+                            "connectors/ingestion/workflows/lineage",
+                            "connectors/ingestion/workflows/lineage/lineage-workflow-query-logs",
+                            "connectors/ingestion/workflows/lineage/filter-query-set"
+                        ]
+                    },
+                    {
+                            "group": "dbt",
+                            "pages": [
+                            "connectors/ingestion/workflows/dbt",
+                            "connectors/ingestion/workflows/dbt/configure-dbt-workflow-from-ui",
+                            "connectors/ingestion/workflows/dbt/auto-ingest-dbt-core",
+                            "connectors/ingestion/workflows/dbt/run-dbt-workflow-externally",
+                            "connectors/ingestion/workflows/dbt/ingest-dbt-owner",
+                            "connectors/ingestion/workflows/dbt/ingest-dbt-descriptions",
+                            "connectors/ingestion/workflows/dbt/ingest-dbt-tags",
+                            "connectors/ingestion/workflows/dbt/ingest-dbt-tier",
+                            "connectors/ingestion/workflows/dbt/ingest-dbt-glossary",
+                            "connectors/ingestion/workflows/dbt/ingest-dbt-lineage",
+                            "connectors/ingestion/workflows/dbt/setup-multiple-dbt-projects",
+                            "connectors/ingestion/workflows/dbt/dbt-troubleshooting"
+                    ]
+                  }
+                ]
+              },
+              {
+                            "group": "Lineage",
+                            "pages": [
+                            "connectors/ingestion/lineage",
+                            "connectors/ingestion/lineage/edit-lineage-manually",
+                            "connectors/ingestion/lineage/export-lineage",
+                            "connectors/ingestion/lineage/spark-lineage"
+                        ]
+                    },
+                    {
+                            "group": "Versioning",
+                            "pages": [
+                            "connectors/ingestion/versioning",
+                            "connectors/ingestion/versioning/change-feeds",
+                            "connectors/ingestion/versioning/change-events",
+                            "connectors/ingestion/versioning/event-notification-via-webhooks"
+                        ]
+                    },
+                            "connectors/ingestion/auto_tagging",
+                            "connectors/ingestion/great-expectations",
+                            "connectors/ingestion/deployment",
+                            "connectors/ingestion/best-practices"
+                        ]
+                    },
+                    {
+                            "group": "Troubleshooting",
+                            "pages": [
+                            "connectors/troubleshooting"
+                            ]
                     }
                 ]
             },
@@ -207,9 +345,9 @@
                     {
                         "tab": "Developers",
                         "pages": ["developers/api"]
-                    }
+                   }
                 ]
-            }
+             }
         ]
     }
 }

@@ -4,6 +4,10 @@ description: Configure Sigma dashboard connector for OpenMetadata using YAML. St
 slug: /connectors/dashboard/sigma/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Sigma"
 stage="PROD"
@@ -90,9 +94,9 @@ To get to know the Sigma REST API Version visit [here](https://help.sigmacomputi
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

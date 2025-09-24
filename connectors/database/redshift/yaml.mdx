@@ -4,6 +4,8 @@ description: Ingest metadata from Redshift using YAML and configure access, prof
 slug: /connectors/database/redshift/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Redshift"
 stage="PROD"
@@ -114,7 +116,7 @@ This is a sample config for Redshift:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Integrate Yaml for metadata sync, profiling, and lineage. Start con
 slug: /connectors/database/snowflake/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Snowflake"
 stage="PROD"
@@ -202,7 +204,7 @@ When using this field make sure you have all these tables available within your 
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

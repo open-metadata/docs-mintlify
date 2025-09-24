@@ -4,6 +4,8 @@ description: Configure AWS Glue ingestion using YAML to capture ETL job metadata
 slug: /connectors/database/glue/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Glue"
 stage="PROD"
@@ -70,7 +72,7 @@ This is a sample config for Glue:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

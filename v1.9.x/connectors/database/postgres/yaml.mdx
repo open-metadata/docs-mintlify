@@ -4,6 +4,8 @@ description: Use YAML to configure Postgres metadata ingestion with profiling an
 slug: /connectors/database/postgres/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="PostgreSQL"
 stage="PROD"
@@ -232,7 +234,7 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Use YAML to configure Airflow pipeline metadata ingestion including
 slug: /connectors/pipeline/airflow/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Airflow"
 stage="PROD"
@@ -111,7 +113,7 @@ In terms of `connection` we support the following selections:
 
 {% partial file="/v1.9/connectors/yaml/pipeline/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

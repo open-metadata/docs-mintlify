@@ -4,6 +4,8 @@ description: Use YAML to ingest metadata from Hive including tables, partitions,
 slug: /connectors/database/hive/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Hive"
 stage="PROD"
@@ -113,7 +115,7 @@ You can also ingest the metadata using Postgres metastore. This step is optional
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

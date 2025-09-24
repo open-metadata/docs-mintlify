@@ -4,6 +4,8 @@ description: Configure MSSQL metadata ingestion using YAML for profiling, table 
 slug: /connectors/database/mssql/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="MSSQL"
 stage="PROD"
@@ -127,7 +129,7 @@ This is a sample config for MSSQL:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Configure OpenMetadata'sTrino database connector with YAML. Step-by
 slug: /connectors/database/trino/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Trino"
 stage="PROD"
@@ -139,7 +141,7 @@ This is a sample config for Trino:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

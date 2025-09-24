@@ -4,6 +4,8 @@ description: Use YAML to configure OpenSearch ingestion and enable search index 
 slug: /connectors/search/opensearch/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="OpenSearch"
 stage="PROD"
@@ -186,7 +188,7 @@ information in AWS CloudTrail logs to determine who took actions with a role.
 
 {% partial file="/v1.9/connectors/yaml/search/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

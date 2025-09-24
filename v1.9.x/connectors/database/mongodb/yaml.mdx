@@ -4,6 +4,8 @@ description: Configure MongoDB ingestion via YAML to extract collection metadata
 slug: /connectors/database/mongodb/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="MongoDB"
 stage="PROD"
@@ -89,7 +91,7 @@ Using Atlas? Follow [this guide](https://www.mongodb.com/docs/guides/atlas/conne
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

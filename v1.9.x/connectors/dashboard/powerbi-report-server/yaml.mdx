@@ -3,6 +3,10 @@ title: Run the PowerBI Report Server Connector Externally
 slug: /connectors/dashboard/powerbireportserver/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
   name="PowerBI Report Server"
   stage="BETA"
@@ -88,9 +92,9 @@ Web Portal Virtual Directory name which you have configured in your PowerBI Repo
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

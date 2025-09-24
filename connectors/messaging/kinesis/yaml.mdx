@@ -4,6 +4,8 @@ description: Use YAML to configure ingestion from Kinesis streams and extract to
 slug: /connectors/messaging/kinesis/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Kinesis"
 stage="PROD"
@@ -85,7 +87,7 @@ This is a sample config for Kinesis:
 
 {% partial file="/v1.9/connectors/yaml/messaging/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

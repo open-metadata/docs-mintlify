@@ -4,6 +4,8 @@ description: Configure MySQL ingestion using YAML to automate schema, column, an
 slug: /connectors/database/mysql/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="MySQL"
 stage="PROD"
@@ -412,7 +414,7 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

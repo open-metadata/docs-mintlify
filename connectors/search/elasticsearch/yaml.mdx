@@ -4,6 +4,8 @@ description: Use YAML to configure Elasticsearch metadata ingestion and track in
 slug: /connectors/search/elasticsearch/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Elasticsearch"
 stage="PROD"
@@ -122,7 +124,7 @@ This is a sample config for Elasticsearch:
 
 {% partial file="/v1.9/connectors/yaml/search/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

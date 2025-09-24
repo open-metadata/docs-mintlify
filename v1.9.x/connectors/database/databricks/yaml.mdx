@@ -4,6 +4,8 @@ description: Use YAML to ingest Databricks metadata including notebook lineage, 
 slug: /connectors/database/databricks/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Databricks"
 stage="PROD"
@@ -139,7 +141,7 @@ This is a sample config for Databricks:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

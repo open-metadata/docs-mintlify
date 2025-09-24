@@ -4,6 +4,8 @@ description: Use YAML to configure Airbyte ingestion and extract metadata from p
 slug: /connectors/pipeline/airbyte/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Airbyte"
 stage="PROD"
@@ -83,7 +85,7 @@ This is a sample config for Airbyte:
 
 {% partial file="/v1.9/connectors/yaml/pipeline/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

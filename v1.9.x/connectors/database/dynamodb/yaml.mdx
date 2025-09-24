@@ -4,6 +4,8 @@ description: Use YAML to ingest metadata from DynamoDB, capturing key attributes
 slug: /connectors/database/dynamodb/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="DynamoDB"
 stage="PROD"
@@ -89,7 +91,7 @@ This is a sample config for DynamoDB:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

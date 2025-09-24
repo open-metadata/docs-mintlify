@@ -4,6 +4,8 @@ description: Configure SQLite database connections in OpenMetadata with YAML. St
 slug: /connectors/database/sqlite/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="SQLite"
 stage="PROD"
@@ -90,7 +92,7 @@ This is a sample config for SQLite:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

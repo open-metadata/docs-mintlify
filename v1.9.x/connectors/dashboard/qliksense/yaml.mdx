@@ -4,6 +4,10 @@ description: Configure QlikSense dashboard connectors in OpenMetadata using YAML
 slug: /connectors/dashboard/qliksense/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
   name="Qlik Sense"
   stage="PROD"
@@ -140,9 +144,9 @@ You will have to replace new lines with `\n` and the final private key that you 
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

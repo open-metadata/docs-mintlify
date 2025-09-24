@@ -4,6 +4,8 @@ description: Configure Pinot ingestion using YAML to extract metadata and schema
 slug: /connectors/database/pinotdb/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="PinotDB"
 stage="PROD"
@@ -86,7 +88,7 @@ This is a sample config for PinotDB:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

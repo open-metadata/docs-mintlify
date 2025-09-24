@@ -5,6 +5,8 @@ slug: /connectors/database/servicenow/yaml
 Collate: true
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="ServiceNow"
 stage="BETA"
@@ -80,7 +82,7 @@ This is a sample config for ServiceNow:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

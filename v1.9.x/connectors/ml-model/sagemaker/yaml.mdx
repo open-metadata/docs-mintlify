@@ -4,6 +4,8 @@ description: Configure SageMaker ingestion with YAML to extract model metadata, 
 slug: /connectors/ml-model/sagemaker/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Sagemaker"
 stage="PROD"
@@ -83,7 +85,7 @@ This is a sample config for Sagemaker:
 
 {% partial file="/v1.9/connectors/yaml/ml-model/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Configure NiFi ingestion using YAML to capture pipeline details, me
 slug: /connectors/pipeline/nifi/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Nifi"
 stage="PROD"
@@ -78,7 +80,7 @@ This is a sample config for NiFi:
 
 {% partial file="/v1.9/connectors/yaml/pipeline/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,10 @@ description: Learn how to connect Unity Catalog to OpenMetadata with our compreh
 slug: /connectors/database/unity-catalog
 ---
 
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
 {% connectorDetailsHeader
 name="Unity Catalog"
 stage="PROD"
@@ -29,13 +33,13 @@ Configure and schedule Unity Catalog metadata workflow from the OpenMetadata UI:
 
 {% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/unity-catalog/yaml"} /%}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Unity Catalog ingestion, you will need to install:
 

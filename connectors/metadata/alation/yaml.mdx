@@ -5,6 +5,14 @@ slug: /connectors/metadata/alation/yaml
 collate: true
 ---
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Alation"
 stage="PROD"
@@ -21,7 +29,7 @@ Configure and schedule Alation metadata and profiler workflows from the OpenMeta
 - [Metadata Ingestion](#metadata-ingestion)
 
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -214,7 +222,7 @@ To send the metadata to OpenMetadata, it needs to be specified as `type: metadat
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 {% /codeInfoContainer %}
 
 {% codeBlock fileName="filename.yaml" %}
@@ -325,10 +333,10 @@ sink:
   config: {}
 ```
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

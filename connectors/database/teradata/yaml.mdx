@@ -3,6 +3,16 @@ title: Run the Teradata Connector Externally
 slug: /connectors/database/teradata/yaml
 ---
 
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Teradata"
 stage="BETA"
@@ -22,13 +32,13 @@ Configure and schedule Greenplum Teradata and profiler workflows from the OpenMe
 - [Data Quality](#data-quality)
 
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Teradata ingestion, you will need to install:
 
@@ -103,15 +113,15 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />
 
 {% partial file="/v1.9/connectors/yaml/lineage.mdx" variables={connector: "teradata"} /%}
 

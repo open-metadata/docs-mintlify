@@ -4,6 +4,8 @@ description: Connect BigQuery to OpenMetadata seamlessly with our comprehensive 
 slug: /connectors/database/bigquery
 ---
 
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
 {% connectorDetailsHeader
 name="BigQuery"
 stage="PROD"
@@ -33,7 +35,7 @@ Configure and schedule BigQuery metadata and profiler workflows from the OpenMet
 
 {% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 

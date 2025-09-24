@@ -7,6 +7,24 @@ slug: /connectors/dashboard/superset/yaml
 import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import SourceConfig from '/snippets/connectors/yaml/dashboard/source-config.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from '/snippets/connectors/yaml/workflow-config.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Superset"
 stage="PROD"
@@ -23,7 +41,7 @@ Configure and schedule Superset metadata and profiler workflows from the OpenMet
 - [Metadata Ingestion](#metadata-ingestion)
 - [Enable Security](#securing-superset-connection-with-ssl-in-openmetadata)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -37,7 +55,7 @@ The ingestion also works with Superset 2.0.0 🎉
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Superset ingestion, you will need to install:
 
@@ -145,7 +163,7 @@ You can use Postgres Connection when you have SSO enabled and your Superset is b
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -188,11 +206,11 @@ source:
         # database: superset
 ```
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config.mdx" /%}
+<SourceConfig />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
@@ -227,4 +245,4 @@ source:
             caCertificate: "/path/to/ca/certificate" 
 ```
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

@@ -4,6 +4,8 @@ description: Connect Exasol database to OpenMetadata with our comprehensive conn
 slug: /connectors/database/exasol
 ---
 
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
 {% connectorDetailsHeader
 name="Exasol"
 stage="PROD"
@@ -23,7 +25,7 @@ Configure and schedule Exasol metadata from the OpenMetadata UI:
 
 {% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/exasol/yaml"} /%}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 {%inlineCallout icon="description" bold="OpenMetadata 1.6.1 or later" href="/deployment"%}
 To deploy OpenMetadata, check the Deployment guides.

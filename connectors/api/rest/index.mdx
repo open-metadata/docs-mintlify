@@ -4,6 +4,10 @@ description: Learn how to integrate REST APIs with OpenMetadata connectors. Comp
 slug: /connectors/api/rest
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="REST"
 stage="BETA"
@@ -54,9 +58,9 @@ An OpenAPI schema URL typically refers to the URL where the OpenAPI Specificatio
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

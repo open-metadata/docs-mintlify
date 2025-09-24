@@ -4,6 +4,12 @@ description: Connect MicroStrategy dashboards to OpenMetadata with our comprehen
 slug: /connectors/dashboard/microstrategy
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
   name="MicroStrategy"
   stage="PROD"
@@ -68,10 +74,10 @@ If you're using demo account for Microstrategy, it will be needed to authenticat
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

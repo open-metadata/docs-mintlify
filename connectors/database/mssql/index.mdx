@@ -4,6 +4,14 @@ description: Connect your Microsoft SQL Server to OpenMetadata with our comprehe
 slug: /connectors/database/mssql
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="MSSQL"
 stage="PROD"
@@ -113,15 +121,15 @@ For details step please refer to this [link](https://docs.microsoft.com/en-us/sq
 - **Database**: The initial database to establish a connection to the data source.
 - **Ingest All Databases**: If you need to ingest multiple databases - aside from the initial one above - you can enable this option.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

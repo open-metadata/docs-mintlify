@@ -4,6 +4,14 @@ description: Connect Tableau dashboards to OpenMetadata with our comprehensive c
 slug: /connectors/dashboard/tableau
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
+
 {% connectorDetailsHeader
 name="Tableau"
 stage="PROD"
@@ -147,11 +155,11 @@ For more information to get a Personal Access Token please visit this [link](htt
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 
@@ -165,7 +173,7 @@ To establish secure connections between OpenMetadata and Tableau, navigate to th
   height="450px"
   caption="SSL Configuration" /%}
 
-{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.mdx" /%}
+<DashboardLineage />
 
 {% collateContent %}
 {% partial file="/v1.9/connectors/dashboard/tableau/reverse-metadata.mdx" /%}

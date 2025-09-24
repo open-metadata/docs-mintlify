@@ -4,6 +4,14 @@ description: Connect SAP ERP to OpenMetadata with our comprehensive database con
 slug: /connectors/database/sap-erp
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="SAP ERP"
 stage="PROD"
@@ -52,15 +60,15 @@ Follow the guide [here](/connectors/database/sap-erp/setup-sap-apis) to setup th
 - **databaseSchema**: Optional name to give to the database schema in OpenMetadata. If left blank, we will use `default` as the database schema name.
 - **paginationLimit**: Pagination limit used while querying the SAP ERP APIs for fetching the entities.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

@@ -5,6 +5,12 @@ slug: /connectors/dashboard/thoughtspot
 collate: true
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="ThoughtSpot"
 stage="BETA"
@@ -93,11 +99,11 @@ To access the ThoughtSpot APIs and import liveboards, charts, and data models fr
 
 {% stepsContainer %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

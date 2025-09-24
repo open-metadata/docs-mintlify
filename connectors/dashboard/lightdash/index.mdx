@@ -4,6 +4,14 @@ description: Connect Lightdash to OpenMetadata with our comprehensive dashboard 
 slug: /connectors/dashboard/lightdash
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
+
 {% connectorDetailsHeader
   name="Lightdash"
   stage="PROD"
@@ -60,12 +68,12 @@ To integrate Lightdash, ensure you are using OpenMetadata version 1.2.x or highe
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 
-{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.mdx" /%}
+<DashboardLineage />

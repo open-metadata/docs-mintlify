@@ -4,6 +4,10 @@ description: Connect Elasticsearch to OpenMetadata with our comprehensive connec
 slug: /connectors/search/elasticsearch
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="Elasticsearch"
 stage="PROD"
@@ -87,10 +91,10 @@ We extract Elasticsearch's metadata by using its [API](https://www.elastic.co/gu
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 {% partial file="/v1.9/connectors/search/configure-ingestion.mdx" /%}
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

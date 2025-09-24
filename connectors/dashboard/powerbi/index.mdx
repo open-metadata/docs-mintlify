@@ -4,6 +4,14 @@ description: Connect Power BI to OpenMetadata with our comprehensive dashboard c
 slug: /connectors/dashboard/powerbi
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
+
 {% connectorDetailsHeader
   name="PowerBI"
   stage="PROD"
@@ -182,12 +190,12 @@ Refer to the section [here](/connectors/dashboard/powerbi#powerbi-admin-and-nona
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 
-{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.mdx" /%}
+<DashboardLineage />

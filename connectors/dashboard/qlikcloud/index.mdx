@@ -4,6 +4,14 @@ description: Connect QlikCloud dashboards to OpenMetadata effortlessly. Complete
 slug: /connectors/dashboard/qlikcloud
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
+
 {% connectorDetailsHeader
   name="Qlik Cloud"
   stage="PROD"
@@ -52,12 +60,12 @@ To deploy OpenMetadata, check the Deployment guides.
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 
-{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.mdx" /%}
+<DashboardLineage />

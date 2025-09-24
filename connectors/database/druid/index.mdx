@@ -4,6 +4,14 @@ description: Learn how to connect Apache Druid to OpenMetadata with our comprehe
 slug: /connectors/database/druid
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="Druid"
 stage="PROD"
@@ -47,15 +55,15 @@ Configure and schedule Druid metadata and profiler workflows from the OpenMetada
 - **Host and Port**: Enter the fully qualified hostname and port number for your Druid deployment in the Host and Port field.
 - **Database Name**: Optional name to give to the database in OpenMetadata. If left blank, we will use default as the database name.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

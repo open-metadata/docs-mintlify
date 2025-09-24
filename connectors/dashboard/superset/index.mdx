@@ -4,6 +4,16 @@ description: Learn how to connect Apache Superset dashboards to OpenMetadata wit
 slug: /connectors/dashboard/superset
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
   name="Superset"
   stage="PROD"
@@ -87,7 +97,7 @@ You can use Mysql Connection when you have SSO enabled and your Superset is back
 - **sslCertificate**: Provide the path to ssl client certificate file (ssl_cert).
 - **sslKey**: Provide the path to ssl client certificate file (ssl_key).
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 #### For Postgres Connection
 
@@ -99,15 +109,15 @@ You can use Postgres Connection when you have SSO enabled and your Superset is b
 - **Database**: Initial Postgres database to connect to. Specify the name of database associated with Superset instance.
 - **caCertificate**: Provide the path to ssl ca file.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 
@@ -137,4 +147,4 @@ You can use Postgres Connection when you have SSO enabled and your Superset is b
   height="450px"
   caption="SSL Configuration" /%}
 
-{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.mdx" /%}
+<DashboardLineage />

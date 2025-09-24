@@ -4,6 +4,16 @@ description: Configure SAS database connections in OpenMetadata with YAML. Step-
 slug: /connectors/database/sas/yaml
 ---
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="SAS"
 stage="BETA"
@@ -20,7 +30,7 @@ Configure and schedule SAS metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -31,7 +41,7 @@ To deploy OpenMetadata, check the Deployment guides.
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the SAS ingestion, you will need to install:
 
@@ -93,7 +103,7 @@ To send the metadata to OpenMetadata, it needs to be specified as `type: metadat
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 {% /codeInfoContainer %}
 
 {% codeBlock fileName="filename.yaml" %}
@@ -134,10 +144,10 @@ sink:
   config: {}
 ```
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

@@ -6,6 +6,18 @@ slug: /connectors/database/sap-hana/yaml
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="SAP HANA"
 stage="PROD"
@@ -25,7 +37,7 @@ Configure and schedule SAP HANA metadata and profiler workflows from the OpenMet
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -40,7 +52,7 @@ The connector is compatible with HANA or HANA express versions since HANA SPS 2.
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the SAP HANA ingestion, you will need to install:
 
@@ -154,7 +166,7 @@ If you have a User Store configured, then:
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 #### Advanced Configuration
 
 {% codeInfo srNumber=7 %}
@@ -215,15 +227,15 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />
 
 {% partial file="/v1.9/connectors/yaml/lineage.mdx" variables={connector: "sapHana"} /%}
 

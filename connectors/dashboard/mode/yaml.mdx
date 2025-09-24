@@ -7,6 +7,24 @@ slug: /connectors/dashboard/mode/yaml
 import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import SourceConfig from '/snippets/connectors/yaml/dashboard/source-config.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from '/snippets/connectors/yaml/workflow-config.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Mode"
 stage="PROD"
@@ -22,7 +40,7 @@ Configure and schedule Mode metadata and profiler workflows from the OpenMetadat
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -30,7 +48,7 @@ OpenMetadata relies on Mode's API, which is exclusive to members of the Mode Bus
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Mode ingestion, you will need to install:
 
@@ -110,7 +128,7 @@ Name of the mode workspace from where the metadata is to be fetched.
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -140,15 +158,15 @@ source:
       # filterQueryParam: ""
 ```
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config.mdx" /%}
+<SourceConfig />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />
 

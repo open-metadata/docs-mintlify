@@ -6,6 +6,18 @@ slug: /connectors/messaging/redpanda/yaml
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Redpanda"
 stage="PROD"
@@ -21,13 +33,13 @@ Configure and schedule Redpanda metadata and profiler workflows from the OpenMet
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Redpanda ingestion, you will need to install:
 
@@ -132,7 +144,7 @@ following [link](https://docs.confluent.io/platform/current/clients/confluent-ka
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -180,12 +192,12 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/messaging/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

@@ -4,6 +4,24 @@ description: Configure Tableau dashboard connections in OpenMetadata using YAML.
 slug: /connectors/dashboard/tableau/yaml
 ---
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import SourceConfig from '/snippets/connectors/yaml/dashboard/source-config.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from '/snippets/connectors/yaml/workflow-config.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Tableau"
 stage="PROD"
@@ -23,7 +41,7 @@ Configure and schedule Tableau metadata and profiler workflows from the OpenMeta
 - [Reverse Metadata](/applications/reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -45,7 +63,7 @@ For more information on enabling the Tableau Metadata APIs follow the link [here
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Tableau ingestion, you will need to install:
 
@@ -153,7 +171,7 @@ To send the metadata to OpenMetadata, it needs to be specified as `type: metadat
 {% /codeInfo %}
 
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -209,11 +227,11 @@ source:
 ```
 
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config.mdx" /%}
+<SourceConfig />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
@@ -345,4 +363,4 @@ To establish secure connections between OpenMetadata and Tableau, in the `YAML` 
             sslKey: "/path/to/your/ssl_key"
 ```
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

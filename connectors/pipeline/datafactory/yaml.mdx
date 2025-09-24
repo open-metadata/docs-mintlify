@@ -7,6 +7,18 @@ collate: true
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Azure Data Factory"
 stage="PROD"
@@ -24,7 +36,7 @@ Configure and schedule Azure Data Factory metadata and profiler workflows from t
     - [Data Factory Versions](#data-factory-versions)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -40,7 +52,7 @@ Ensure that the service principal or managed identity you’re using has the nec
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Data Factory ingestion, you will need to install:
 
@@ -105,7 +117,7 @@ This is a sample config for Data Factory:
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -139,12 +151,12 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/pipeline/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

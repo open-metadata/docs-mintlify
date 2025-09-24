@@ -5,6 +5,8 @@ slug: /connectors/metadata/alation
 collate: true
 ---
 
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
 {% connectorDetailsHeader
 name="Alation"
 stage="PROD"
@@ -25,7 +27,7 @@ Configure and schedule Alation metadata workflow from the OpenMetadata UI:
 
 {% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/metadata/alation/yaml"} /%}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 

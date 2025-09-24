@@ -6,6 +6,14 @@ slug: /connectors/storage/gcs/yaml
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="GCS"
 stage="PROD"
@@ -21,7 +29,7 @@ Configure and schedule GCS metadata workflows from the CLI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -130,7 +138,7 @@ source:
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 #### Advanced Configuration
 
@@ -181,9 +189,9 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/storage/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 

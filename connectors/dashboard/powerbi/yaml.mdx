@@ -7,6 +7,24 @@ slug: /connectors/dashboard/powerbi/yaml
 import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import SourceConfig from '/snippets/connectors/yaml/dashboard/source-config.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from '/snippets/connectors/yaml/workflow-config.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
   name="PowerBI"
   stage="PROD"
@@ -22,7 +40,7 @@ Configure and schedule PowerBI metadata and profiler workflows from the OpenMeta
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -105,7 +123,7 @@ For reference here is a [thread](https://community.powerbi.com/t5/Service/Error-
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the PowerBI ingestion, you will need to install:
 
@@ -240,7 +258,7 @@ Refer to the section [here](/connectors/dashboard/powerbi#powerbi-admin-and-nona
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -353,14 +371,14 @@ source:
       #   pbitFilesExtractDir: /tmp/pbitFiles  # Local directory for extracted files
 ```
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config.mdx" /%}
+<SourceConfig />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

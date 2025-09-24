@@ -4,6 +4,16 @@ description: Use YAML to ingest metadata from Apache Atlas including classificat
 slug: /connectors/metadata/atlas/yaml
 ---
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="Atlas"
 stage="PROD"
@@ -20,7 +30,7 @@ Configure and schedule Atlas metadata and profiler workflows from the OpenMetada
 - [Metadata Ingestion](#metadata-ingestion)
 
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -29,7 +39,7 @@ For more details click [here](/connectors/metadata/atlas#1.-create-database-&-me
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the Atlas ingestion, you will need to install:
 
@@ -102,7 +112,7 @@ To send the metadata to OpenMetadata, it needs to be specified as `type: metadat
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 {% /codeInfoContainer %}
 
 {% codeBlock fileName="filename.yaml" %}
@@ -142,10 +152,10 @@ sink:
   config: {}
 ```
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

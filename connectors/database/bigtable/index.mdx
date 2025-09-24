@@ -4,6 +4,8 @@ description: Connect Google Cloud Bigtable to OpenMetadata with our comprehensiv
 slug: /connectors/database/bigtable
 ---
 
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
 {% connectorDetailsHeader
 name="BigTable"
 stage="PROD"
@@ -23,7 +25,7 @@ Configure and schedule BigTable metadata and profiler workflows from the OpenMet
 
 {% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/bigtable/yaml"} /%}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 {%inlineCallout icon="description" bold="OpenMetadata 1.3.1 or later" href="/deployment"%}
 To deploy OpenMetadata, check the Deployment guides.

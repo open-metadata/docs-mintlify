@@ -7,6 +7,10 @@ Collate: true
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
 {% connectorDetailsHeader
 name="Epic"
 stage="BETA"
@@ -24,7 +28,7 @@ Configure and schedule Epic metadata workflows from the OpenMetadata UI:
 
 {% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/epic/yaml"} /%}
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -77,7 +81,7 @@ This is a minimal sample config for Epic:
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 

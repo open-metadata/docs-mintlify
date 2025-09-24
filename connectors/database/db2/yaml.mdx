@@ -6,6 +6,18 @@ slug: /connectors/database/db2/yaml
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="DB2"
 stage="PROD"
@@ -24,7 +36,7 @@ Configure and schedule DB2 metadata and profiler workflows from the OpenMetadata
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -55,7 +67,7 @@ Executing the profiler workflow or data quality tests, will require the user to 
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the DB2 ingestion, you will need to install:
 
@@ -127,7 +139,7 @@ This is a sample config for DB2:
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 #### Advanced Configuration
 
@@ -187,15 +199,15 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />
 
 {% partial file="/v1.9/connectors/yaml/lineage.mdx" variables={connector: "db2"} /%}
 

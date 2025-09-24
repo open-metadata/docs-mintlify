@@ -6,6 +6,18 @@ slug: /connectors/database/sap-erp/yaml
 
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
 name="SAP ERP"
 stage="PROD"
@@ -22,7 +34,7 @@ Configure and schedule SAP ERP metadata workflow externally:
 - [Metadata Ingestion](#metadata-ingestion)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
@@ -36,7 +48,7 @@ Follow the guide [here](/connectors/database/sap-erp/setup-sap-apis) to setup th
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the SAP ERP ingestion, you will need to install:
 
@@ -105,7 +117,7 @@ In the case of SAP ERP, we won't have a Database Schema as such. If you'd like t
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 #### Advanced Configuration
 
@@ -166,15 +178,15 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />
 
 ## Securing SAP ERP Connection with SSL in OpenMetadata
 

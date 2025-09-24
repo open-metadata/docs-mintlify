@@ -7,6 +7,24 @@ slug: /connectors/dashboard/qliksense/yaml
 import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
 import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
 
+import WorkflowConfigDef from 'snippets/connectors/yaml/workflow-config-def.mdx'
+
+import SourceConfig from '/snippets/connectors/yaml/dashboard/source-config.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from '/snippets/connectors/yaml/workflow-config.mdx'
+
+import IngestionCli from '/snippets/connectors/yaml/ingestion-cli.mdx'
+
+import PythonRequirements from '/snippets/connectors/python-requirements.mdx'
+
+import ExternalIngestionDeployment from '/snippets/connectors/external-ingestion-deployment.mdx'
+
+import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
+
+import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
+
 {% connectorDetailsHeader
   name="Qlik Sense"
   stage="PROD"
@@ -23,13 +41,13 @@ Configure and schedule PowerBI metadata and profiler workflows from the OpenMeta
 - [Metadata Ingestion](#metadata-ingestion)
 - [Enable Security](#securing-qlik-sense-connection-with-ssl-in-openmetadata)
 
-{% partial file="/v1.9/connectors/external-ingestion-deployment.mdx" /%}
+<ExternalIngestionDeployment />
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.9/connectors/python-requirements.mdx" /%}
+<PythonRequirements />
 
 To run the PowerBI ingestion, you will need to install:
 
@@ -147,7 +165,7 @@ You will have to replace new lines with `\n` and the final private key that you 
 
 <IngestionSinkDef />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
+<WorkflowConfigDef />
 
 {% /codeInfoContainer %}
 
@@ -190,11 +208,11 @@ source:
 ```yaml {% srNumber=6 %}
       validateHostName: false
 ```
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config.mdx" /%}
+<SourceConfig />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink.mdx" /%}
+<IngestionSink />
 
-{% partial file="/v1.9/connectors/yaml/workflow-config.mdx" /%}
+<WorkflowConfig />
 
 {% /codeBlock %}
 
@@ -225,4 +243,4 @@ Refer to the guide on how to generate authentication certificates so that OpenMe
         rootCertificateData: -----BEGIN CERTIFICATE-----\n....\n...-----END CERTIFICATE-----\n
 ```
 
-{% partial file="/v1.9/connectors/yaml/ingestion-cli.mdx" /%}
+<IngestionCli />

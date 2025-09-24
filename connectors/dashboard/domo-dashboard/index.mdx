@@ -4,6 +4,12 @@ description: Connect Domo dashboards to OpenMetadata with our comprehensive conn
 slug: /connectors/dashboard/domo-dashboard
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
   name="Domo"
   stage="PROD"
@@ -51,10 +57,10 @@ For questions related to scopes, click [here](https://developer.domo.com/portal/
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

@@ -5,6 +5,14 @@ slug: /connectors/database/servicenow
 Collate: true
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="ServiceNow"
 stage="BETA"
@@ -53,15 +61,15 @@ To fetch metadata from ServiceNow into OpenMetadata you will need:
 - **Include Scopes as Schemas**: If true, ServiceNow application scopes will be imported as database schemas. Otherwise, a single default schema will be used. Default: `false`.
 - **Include System Tables**: If true, both admin and system tables (`sys_*` tables) will be fetched. If false, only admin tables will be fetched. Default: `false`.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

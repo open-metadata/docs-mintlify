@@ -4,6 +4,10 @@ description: Connect Amazon Kinesis to OpenMetadata with our comprehensive conne
 slug: /connectors/messaging/kinesis
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="Kinesis"
 stage="PROD"
@@ -136,10 +140,10 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 {% partial file="/v1.9/connectors/messaging/configure-ingestion.mdx" /%}
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

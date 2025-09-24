@@ -4,6 +4,12 @@ slug: /connectors/database/ssas
 collate: true
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
 {% connectorDetailsHeader
 name="SSAS"
 stage="BETA"
@@ -61,11 +67,11 @@ These steps are necessary to allow the connector to communicate with your SSAS i
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

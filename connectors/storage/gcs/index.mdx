@@ -4,6 +4,10 @@ description: Connect OpenMetadata to Google Cloud Storage with our comprehensive
 slug: /connectors/storage/gcs
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="GCS"
 stage="PROD"
@@ -168,10 +172,10 @@ desired.
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 {% partial file="/v1.9/connectors/storage/configure-ingestion.mdx" /%}
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

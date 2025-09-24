@@ -4,6 +4,14 @@ description: Learn to Configure OpenMetadata'sSQLite database connector for seam
 slug: /connectors/database/sqlite
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="SQLite"
 stage="PROD"
@@ -55,15 +63,15 @@ To extract metadata, the user needs to be able to perform `.tables`, `.schema`, 
 - **Database**: The database of the data source is an optional parameter, if you would like to restrict the metadata reading to a single database. If left blank, OpenMetadata ingestion attempts to scan all the databases.
 - **Database Mode**: How to run the SQLite database. :memory: by default.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

@@ -4,6 +4,14 @@ description: Connect Amazon Athena to OpenMetadata effortlessly. Complete setup 
 slug: /connectors/database/athena
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="Athena"
 stage="PROD"
@@ -230,15 +238,15 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 - **S3 Staging Directory**: The S3 staging directory is an optional parameter. Enter a staging directory to override the default staging directory for AWS Athena.
 - **Athena Workgroup**: The Athena workgroup is an optional parameter. If you wish to have your Athena connection related to an existing AWS workgroup add your workgroup name here.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

@@ -4,6 +4,14 @@ description: Connect Oracle OpenMetadata to OpenMetadata effortlessly. Complete 
 slug: /connectors/database/oracle
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="Oracle"
 stage="PROD"
@@ -123,15 +131,15 @@ there is no routine out of the box in Oracle to grant SELECT to a full schema.
     We are shipping the binaries for ARM and AMD architectures from [here](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)
     and [here](https://www.oracle.com/database/technologies/instant-client/linux-arm-aarch64-downloads.html) for the instant client version 19.
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

@@ -4,6 +4,14 @@ description: Connect Mode Analytics dashboards to OpenMetadata with our comprehe
 slug: /connectors/dashboard/mode
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingestion.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
+
 {% connectorDetailsHeader
   name="Mode"
   stage="PROD"
@@ -67,12 +75,12 @@ Name of the mode workspace from where the metadata is to be fetched.
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/dashboard/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 
-{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.mdx" /%}
+<DashboardLineage />

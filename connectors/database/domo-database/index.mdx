@@ -4,6 +4,12 @@ description: Connect Domo Database to OpenMetadata with our comprehensive connec
 slug: /connectors/database/domo-database
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
 {% connectorDetailsHeader
 name="Domo"
 stage="PROD"
@@ -54,11 +60,11 @@ For questions related to scopes, click [here](https://developer.domo.com/portal/
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

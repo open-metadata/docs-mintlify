@@ -4,6 +4,14 @@ description: Connect Amazon Redshift to OpenMetadata Easily with our comprehensi
 slug: /connectors/database/redshift
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
+import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
+
 {% connectorDetailsHeader
 name="Redshift"
 stage="PROD"
@@ -108,15 +116,15 @@ There are a couple of types of SSL modes that Redshift supports which can be add
 
 For more information, you can visit [Redshift SSL documentation](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-ssl-support.html)
 
-{% partial file="/v1.9/connectors/database/advanced-configuration.mdx" /%}
+<AdvancedConfiguration />
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

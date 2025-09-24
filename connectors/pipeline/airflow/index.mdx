@@ -4,6 +4,10 @@ description: Connect Apache Airflow to OpenMetadata effortlessly. Complete setup
 slug: /connectors/pipeline/airflow
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="Airflow"
 stage="PROD"
@@ -71,10 +75,10 @@ In terms of `connection` we support the following selections:
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 {% partial file="/v1.9/connectors/pipeline/configure-ingestion.mdx" /%}
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

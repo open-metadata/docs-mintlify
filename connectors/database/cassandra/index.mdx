@@ -4,6 +4,12 @@ description: Connect Cassandra to OpenMetadata with our database connector. Step
 slug: /connectors/database/cassandra
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
+import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
+
 {% connectorDetailsHeader
 name="Cassandra"
 stage="BETA"
@@ -78,11 +84,11 @@ In order to integrate SSL in the Metadata Ingestion Config, the user will have t
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
-{% partial file="/v1.9/connectors/database/configure-ingestion.mdx" /%}
+<ConfigureIngestion />
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

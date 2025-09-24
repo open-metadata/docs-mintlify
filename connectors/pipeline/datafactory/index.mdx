@@ -5,6 +5,10 @@ slug: /connectors/pipeline/datafactory
 collate: true
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="Azure Data Factory"
 stage="PROD"
@@ -107,11 +111,11 @@ Ensure that the service principal or managed identity you’re using has the nec
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 {% partial file="/v1.9/connectors/pipeline/configure-ingestion.mdx" /%}
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}
 

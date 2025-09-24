@@ -4,6 +4,10 @@ description: Connect Apache Flink pipelines to OpenMetadata with our comprehensi
 slug: /connectors/pipeline/flink
 ---
 
+import TestConnection from '/snippets/connectors/test-connection.mdx'
+
+import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
+
 {% connectorDetailsHeader
 name="Flink"
 stage="BETA"
@@ -66,10 +70,10 @@ The ingestion framework uses flink REST APIs to connect to the instance and perf
 
 {% /extraContent %}
 
-{% partial file="/v1.9/connectors/test-connection.mdx" /%}
+<TestConnection />
 
 {% partial file="/v1.9/connectors/pipeline/configure-ingestion.mdx" /%}
 
-{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.mdx" /%}
+<IngestionScheduleAndDeploy />
 
 {% /stepsContainer %}

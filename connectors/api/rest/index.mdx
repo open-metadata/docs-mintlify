@@ -10,7 +10,7 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
 
-import IngestionModeTiles from '/connectors/ingestion-modes-tiles.mdx'
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
 
 {% connectorDetailsHeader
 name="REST"
@@ -30,8 +30,6 @@ Configure and schedule REST metadata workflows from the OpenMetadata UI:
 
 <IngestionModeTiles yamlPath="/connectors/api/rest/yaml" />
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/api/rest/yaml"} /%}
-
 ## Requirements
 
 ### Generate OpenAPI Schema URL
@@ -41,7 +39,7 @@ Configure and schedule REST metadata workflows from the OpenMetadata UI:
 
 ## Metadata Ingestion
 
-<MetadataIngestionUi connector={"VertexAI"} selectServicePath={"/images/connectors/rest/select-service.png"} addNewServicePath={"/images/connectors/rest/add-new-service.png"} serviceConnectionPath={"/images/connectors/rest/service-connection.png"} />
+<MetadataIngestionUi connector={"REST"} selectServicePath={"/images/connectors/rest/select-service.png"} addNewServicePath={"/images/connectors/rest/add-new-service.png"} serviceConnectionPath={"/images/connectors/rest/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

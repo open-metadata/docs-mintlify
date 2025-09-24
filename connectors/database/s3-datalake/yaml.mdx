@@ -4,6 +4,8 @@ description: Use YAML to extract metadata from S3 Datalake for file-level lineag
 slug: /connectors/database/s3-datalake/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="S3 Datalake"
 stage="PROD"
@@ -99,7 +101,7 @@ The workflow is modeled around the following JSON Schema.
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

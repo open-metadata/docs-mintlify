@@ -4,6 +4,10 @@ description: Learn how to configure PowerBI dashboard connectors in OpenMetadata
 slug: /connectors/dashboard/powerbi/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
   name="PowerBI"
   stage="PROD"
@@ -233,9 +237,9 @@ Refer to the section [here](/connectors/dashboard/powerbi#powerbi-admin-and-nona
 - `pbitFilesExtractDir`: Specifies the local directory where extracted .pbit files will be stored for processing.
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

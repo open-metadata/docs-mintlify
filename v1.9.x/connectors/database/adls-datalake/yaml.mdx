@@ -4,6 +4,8 @@ description: Configure ADLS Data Lake connections in OpenMetadata with YAML. Ste
 slug: /connectors/database/adls-datalake/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="ADLS Datalake"
 stage="PROD"
@@ -63,7 +65,7 @@ The workflow is modeled around the following JSON Schema.
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

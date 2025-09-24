@@ -4,6 +4,8 @@ description: Use YAML to configure GCS storage ingestion for metadata visibility
 slug: /connectors/storage/gcs/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="GCS"
 stage="PROD"
@@ -126,7 +128,7 @@ source:
 
 {% partial file="/v1.9/connectors/yaml/storage/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Use YAML to configure MLflow ingestion and sync model runs, metrics
 slug: /connectors/ml-model/mlflow/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="MLflow"
 stage="PROD"
@@ -71,7 +73,7 @@ This is a sample config for MLflow:
 
 {% partial file="/v1.9/connectors/yaml/ml-model/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

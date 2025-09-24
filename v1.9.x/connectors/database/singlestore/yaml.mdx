@@ -4,6 +4,8 @@ description: Learn how to Configure OpenMetadata'sSingleStore database connector
 slug: /connectors/database/singlestore/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="SingleStore"
 stage="PROD"
@@ -87,7 +89,7 @@ This is a sample config for SingleStore:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

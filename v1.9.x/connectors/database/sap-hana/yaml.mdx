@@ -4,6 +4,8 @@ description: Configure SAP HANA database connector in OpenMetadata using YAML. S
 slug: /connectors/database/sap-hana/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="SAP HANA"
 stage="PROD"
@@ -150,7 +152,7 @@ If you have a User Store configured, then:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 #### Advanced Configuration

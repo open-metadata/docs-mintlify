@@ -5,6 +5,8 @@ slug: /connectors/database/epic/yaml
 Collate: true
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Epic"
 stage="BETA"
@@ -73,7 +75,7 @@ This is a minimal sample config for Epic:
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

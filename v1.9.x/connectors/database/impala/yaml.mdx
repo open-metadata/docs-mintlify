@@ -4,6 +4,8 @@ description: Use YAML to configure Impala ingestion and extract schema, lineage,
 slug: /connectors/database/impala/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Impala"
 stage="PROD"
@@ -96,7 +98,7 @@ This is a sample config for Hive:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

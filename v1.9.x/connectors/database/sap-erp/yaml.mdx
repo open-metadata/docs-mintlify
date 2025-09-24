@@ -4,6 +4,8 @@ description: Configure SAP ERP database connections in OpenMetadata with YAML. C
 slug: /connectors/database/sap-erp/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="SAP ERP"
 stage="PROD"
@@ -101,7 +103,7 @@ In the case of SAP ERP, we won't have a Database Schema as such. If you'd like t
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

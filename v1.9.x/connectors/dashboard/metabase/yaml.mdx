@@ -4,6 +4,10 @@ description: Configure Metabase dashboard connector for OpenMetadata using YAML.
 slug: /connectors/dashboard/metabase/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
   name="Metabase"
   stage="PROD"
@@ -78,9 +82,9 @@ This is a sample config for Metabase:
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Configure Azure SQL database connections in OpenMetadata with our c
 slug: /connectors/database/azuresql/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="AzureSQL"
 stage="PROD"
@@ -129,7 +131,7 @@ You can download the ODBC driver from [here](https://learn.microsoft.com/en-us/s
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

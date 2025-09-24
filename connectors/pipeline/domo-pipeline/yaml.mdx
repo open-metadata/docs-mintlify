@@ -4,6 +4,8 @@ description: Configure Domo pipeline ingestion via YAML to automate metadata flo
 slug: /connectors/pipeline/domo-pipeline/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Domo"
 stage="PROD"
@@ -97,7 +99,7 @@ This is a sample config for Domo-Pipeline:
 
 {% partial file="/v1.9/connectors/yaml/pipeline/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

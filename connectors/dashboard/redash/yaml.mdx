@@ -4,6 +4,9 @@ description: Configure Redash dashboard connector for OpenMetadata using YAML. S
 slug: /connectors/dashboard/redash/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
   name="Redash"
   stage="PROD"
@@ -79,9 +82,9 @@ Can be found on a user profile page.
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

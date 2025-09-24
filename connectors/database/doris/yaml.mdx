@@ -4,6 +4,8 @@ description: Use YAML to ingest metadata from Doris, including tables, partition
 slug: /connectors/database/doris/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Doris"
 stage="PROD"
@@ -88,7 +90,7 @@ This is a sample config for Doris:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

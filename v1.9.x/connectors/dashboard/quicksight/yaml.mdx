@@ -4,6 +4,10 @@ description: Configure AWS QuickSight connector in OpenMetadata using YAML. Step
 slug: /connectors/dashboard/quicksight/yaml
 ---
 
+import SourceConfigDef from 'snippets/connectors/yaml/dashboard/source-config-def.mdx'
+
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
   name="QuickSight"
   stage="PROD"
@@ -124,9 +128,9 @@ This is a sample config for QuickSight:
 
 {% /codeInfo %}
 
-{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.mdx" /%}
+<SourceConfigDef />
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

@@ -4,6 +4,8 @@ description: Use YAML to configure Presto ingestion, enabling structured metadat
 slug: /connectors/database/presto/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Presto"
 stage="PROD"
@@ -90,7 +92,7 @@ This is a sample config for Presto:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

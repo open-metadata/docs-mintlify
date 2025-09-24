@@ -4,6 +4,8 @@ description: Use YAML to ingest metadata from Apache Cassandra, including keyspa
 slug: /connectors/database/cassandra/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Cassandra"
 stage="BETA"
@@ -101,7 +103,7 @@ Configuration for connecting to DataStax Astra DB in the cloud.
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

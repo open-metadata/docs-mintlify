@@ -4,6 +4,8 @@ description: Use YAML to configure Salesforce connector for metadata extraction 
 slug: /connectors/database/salesforce/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Salesforce"
 stage="PROD"
@@ -114,7 +116,7 @@ By default, the domain `login` is used for accessing Salesforce.
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

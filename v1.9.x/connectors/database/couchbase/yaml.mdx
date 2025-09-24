@@ -4,6 +4,8 @@ description: Configure Couchbase ingestion using YAML to extract document-based 
 slug: /connectors/database/couchbase/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Couchbase"
 stage="BETA"
@@ -84,7 +86,7 @@ This is a sample config for Couchbase:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

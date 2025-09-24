@@ -4,6 +4,8 @@ description: Configure DB2 connector with YAML to ingest structured metadata fro
 slug: /connectors/database/db2/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="DB2"
 stage="PROD"
@@ -123,7 +125,7 @@ This is a sample config for DB2:
 
 {% partial file="/v1.9/connectors/yaml/database/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

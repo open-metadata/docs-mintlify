@@ -4,6 +4,8 @@ description: Configure WhereScape ingestion via YAML to capture data pipeline me
 slug: /connectors/pipeline/wherescape/yaml
 ---
 
+import IngestionSinkDef from 'snippets/connectors/yaml/ingestion-sink-def.mdx'
+
 {% connectorDetailsHeader
 name="Wherescape"
 stage="BETA"
@@ -77,7 +79,7 @@ In terms of `connection` we support the following selections:
 
 {% partial file="/v1.9/connectors/yaml/pipeline/source-config-def.mdx" /%}
 
-{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.mdx" /%}
+<IngestionSinkDef />
 
 {% partial file="/v1.9/connectors/yaml/workflow-config-def.mdx" /%}
 

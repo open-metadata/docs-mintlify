@@ -13,6 +13,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Iceberg"
 stage="BETA"
@@ -53,15 +55,7 @@ Must also have the `s3:GetObject` permission for the location of the Iceberg tab
 It depends on where and how the Hive / Rest Catalog is setup and where the Iceberg files are stored.
 ## Metadata Ingestion
 
-{% partial
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx"
-  variables={
-    connector: "Iceberg",
-    selectServicePath: "/images/v1.9/connectors/iceberg/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/iceberg/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/iceberg/service-connection.png",
-}
-/%}
+<MetadataIngestionUi connector={"Iceberg"} selectServicePath={"/images/connectors/iceberg/select-service.png"} addNewServicePath={"/images/connectors/iceberg/add-new-service.png"} serviceConnectionPath={"/images/connectors/iceberg/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

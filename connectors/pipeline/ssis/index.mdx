@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="SSIS"
 stage="BETA"
@@ -37,15 +39,7 @@ To extract SSIS metadata, we need the batabase connection details where the meta
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "SSIS", 
-    selectServicePath: "/images/v1.9/connectors/ssis/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/ssis/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/ssis/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"SSIS"} selectServicePath={"/images/connectors/ssis/select-service.png"} addNewServicePath={"/images/connectors/ssis/add-new-service.png"} serviceConnectionPath={"/images/connectors/ssis/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

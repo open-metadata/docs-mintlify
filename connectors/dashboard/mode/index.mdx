@@ -14,6 +14,8 @@ import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.m
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
   name="Mode"
   stage="PROD"
@@ -39,15 +41,7 @@ OpenMetadata relies on Mode's API, which is exclusive to members of the Mode Bus
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Mode", 
-    selectServicePath: "/images/v1.9/connectors/mode/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/mode/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/mode/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Mode"} selectServicePath={"/images/connectors/mode/select-service.png"} addNewServicePath={"/images/connectors/mode/add-new-service.png"} serviceConnectionPath={"/images/connectors/mode/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

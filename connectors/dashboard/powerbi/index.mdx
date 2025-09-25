@@ -14,6 +14,8 @@ import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.m
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
   name="PowerBI"
   stage="PROD"
@@ -114,15 +116,7 @@ For reference here is a [thread](https://community.powerbi.com/t5/Service/Error-
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "PowerBI", 
-    selectServicePath: "/images/v1.9/connectors/powerbi/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/powerbi/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/powerbi/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"PowerBI"} selectServicePath={"/images/connectors/powerbi/select-service.png"} addNewServicePath={"/images/connectors/powerbi/add-new-service.png"} serviceConnectionPath={"/images/connectors/powerbi/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

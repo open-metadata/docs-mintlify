@@ -11,6 +11,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Stitch"
 stage="PROD"
@@ -38,15 +40,7 @@ To extract metadata from Stitch, User first need to crate API crednetials:
 
 ## Metadata Ingestion
 
-{% partial 
-    file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-    variables={
-        connector: "Stitch", 
-        selectServicePath: "/images/v1.9/connectors/stitch/select-service.png",
-        addNewServicePath: "/images/v1.9/connectors/stitch/add-new-service.png",
-        serviceConnectionPath: "/images/v1.9/connectors/stitch/service-connection.png",
-    } 
-/%}
+<MetadataIngestionUi connector={"Stitch"} selectServicePath={"/images/connectors/stitch/select-service.png"} addNewServicePath={"/images/connectors/stitch/add-new-service.png"} serviceConnectionPath={"/images/connectors/stitch/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

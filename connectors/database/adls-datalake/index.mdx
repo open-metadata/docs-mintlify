@@ -14,6 +14,8 @@ import AdvancedConfiguration from '/snippets/connectors/database/advanced-config
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="ADLS Datalake"
 stage="PROD"
@@ -48,15 +50,7 @@ permissions on the Storage Account:
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Datalake", 
-    selectServicePath: "/images/v1.9/connectors/datalake/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/datalake/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/datalake/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"ADLS Datalake"} selectServicePath={"/images/connectors/adls-datalake/select-service.png"} addNewServicePath={"/images/connectors/adls-datalake/add-new-service.png"} serviceConnectionPath={"/images/connectors/adls-datalake/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

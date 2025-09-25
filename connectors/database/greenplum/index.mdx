@@ -14,6 +14,8 @@ import AdvancedConfiguration from '/snippets/connectors/database/advanced-config
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Greenplum"
 stage="BETA"
@@ -42,15 +44,7 @@ Configure and schedule Greenplum metadata and profiler workflows from the OpenMe
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Greenplum", 
-    selectServicePath: "/images/v1.9/connectors/greenplum/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/greenplum/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/greenplum/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Greenplum"} selectServicePath={"/images/connectors/greenplum/select-service.png"} addNewServicePath={"/images/connectors/greenplum/add-new-service.png"} serviceConnectionPath={"/images/connectors/greenplum/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

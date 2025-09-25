@@ -18,6 +18,8 @@ import AdvancedConfiguration from '/snippets/connectors/database/advanced-config
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Unity Catalog"
 stage="PROD"
@@ -91,15 +93,7 @@ Adjust <user>, <catalog_name>, <schema_name>, and <table_name> according to your
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Unity Catalog", 
-    selectServicePath: "/images/v1.9/connectors/unitycatalog/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/unitycatalog/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/unitycatalog/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Unity Catalog"} selectServicePath={"/images/connectors/unity-catalog/select-service.png"} addNewServicePath={"/images/connectors/unity-catalog/add-new-service.png"} serviceConnectionPath={"/images/connectors/unity-catalog/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

@@ -14,6 +14,8 @@ import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.m
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Tableau"
 stage="PROD"
@@ -95,15 +97,7 @@ This mapping ensures that:
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Tableau", 
-    selectServicePath: "/images/v1.9/connectors/tableau/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/tableau/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/tableau/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Tableau"} selectServicePath={"/images/connectors/tableau/select-service.png"} addNewServicePath={"/images/connectors/tableau/add-new-service.png"} serviceConnectionPath={"/images/connectors/tableau/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

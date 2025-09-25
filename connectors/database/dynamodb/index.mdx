@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="DynamoDB"
 stage="PROD"
@@ -58,15 +60,7 @@ For more information on Dynamodb permissions visit the [AWS DynamoDB official do
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "DynamoDB", 
-    selectServicePath: "/images/v1.9/connectors/dynamodb/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/dynamodb/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/dynamodb/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"DynamoDB"} selectServicePath={"/images/connectors/dynamodb/select-service.png"} addNewServicePath={"/images/connectors/dynamodb/add-new-service.png"} serviceConnectionPath={"/images/connectors/dynamodb/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

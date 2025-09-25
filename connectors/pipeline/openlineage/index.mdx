@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="OpenLineage"
 stage="PROD"
@@ -67,15 +69,7 @@ To Configure your Airflow instance
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Openlineage", 
-    selectServicePath: "/images/v1.9/connectors/openlineage/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/openlineage/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/openlineage/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"OpenLineage"} selectServicePath={"/images/connectors/openlineage/select-service.png"} addNewServicePath={"/images/connectors/openlineage/add-new-service.png"} serviceConnectionPath={"/images/connectors/openlineage/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagNme="stepsContainer" %}

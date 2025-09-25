@@ -13,6 +13,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Synapse"
 stage="PROD"
@@ -34,7 +36,7 @@ Configure and schedule Synapse metadata and profiler workflows from the OpenMeta
   - [Workflow Deployment Error](#workflow-deployment-error)
 - [Related](#related)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/synapse/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/synapse/yaml" />
 
 ## Requirements
 

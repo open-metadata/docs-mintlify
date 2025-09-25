@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Salesforce"
 stage="PROD"
@@ -30,7 +32,7 @@ Configure and schedule Salesforce metadata and profiler workflows from the OpenM
 - [Enable Security](#securing-salesforce-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/salesforce/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/salesforce/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/salesforce/yaml" />
 
 ## Requirements
 

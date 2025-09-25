@@ -11,6 +11,8 @@ import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingesti
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="ThoughtSpot"
 stage="BETA"
@@ -29,7 +31,7 @@ Configure and schedule ThoughtSpot metadata and profiler workflows from the Open
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/thoughtspot/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/thoughtspot/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/thoughtspot/yaml" />
 
 ## Requirements
 

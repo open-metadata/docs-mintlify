@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="DB2"
 stage="PROD"
@@ -48,7 +50,7 @@ Configure and schedule DB2 metadata and profiler workflows from the OpenMetadata
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/db2/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/db2/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/db2/yaml" />
 
 ## Requirements
 

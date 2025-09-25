@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Greenplum"
 stage="BETA"
@@ -34,7 +36,7 @@ Configure and schedule Greenplum metadata and profiler workflows from the OpenMe
 - [Enable Security](#securing-greenplum-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/greenplum/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/greenplum/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/greenplum/yaml" />
 
 ## Requirements
 

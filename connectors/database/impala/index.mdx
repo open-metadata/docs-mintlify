@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Impala"
 stage="PROD"
@@ -31,7 +33,7 @@ Configure and schedule Impala metadata and profiler workflows from the OpenMetad
 - [Enable Security](#securing-impala-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/impala/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/impala/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/impala/yaml" />
 
 ## Metadata Ingestion
 

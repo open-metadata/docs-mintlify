@@ -9,6 +9,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="Matillion"
 stage="PROD"
@@ -29,7 +31,7 @@ Configure and schedule Matillion metadata and profiler workflows from the OpenMe
 - [Troubleshooting](/connectors/pipeline/matillion/troubleshooting)
     - [Workflow Deployment Error](#workflow-deployment-error)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/matillion/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/matillion/yaml" />
 
 ## Requirements
 To extract metadata from Matillion, you need to create a user with the following permissions:

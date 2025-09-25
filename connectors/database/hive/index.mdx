@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Hive"
 stage="PROD"
@@ -33,7 +35,7 @@ Configure and schedule Hive metadata and profiler workflows from the OpenMetadat
 - [Enable Security](#securing-hive-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/hive/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/hive/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/hive/yaml" />
 
 ## Requirements
 

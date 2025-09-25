@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Redpanda"
 stage="PROD"
@@ -25,7 +27,7 @@ Configure and schedule Redpanda metadata and profiler workflows from the OpenMet
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/messaging/redpanda/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/messaging/redpanda/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/messaging/redpanda/yaml" />
 
 ## Requirements
 

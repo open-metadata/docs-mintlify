@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="MongoDB"
 stage="PROD"
@@ -30,7 +32,7 @@ Configure and schedule MongoDB metadata workflows from the OpenMetadata UI:
 - [Data Profiler](#data-profiler)
 - [Troubleshooting](/connectors/database/mongodb/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/mongodb/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/mongodb/yaml" />
 
 ## Requirements
 

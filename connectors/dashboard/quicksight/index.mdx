@@ -12,6 +12,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="QuickSight"
   stage="PROD"
@@ -29,7 +31,7 @@ Configure and schedule QuickSight metadata and profiler workflows from the OpenM
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/quicksight)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/quicksight/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/quicksight/yaml" />
 ## Requirements
 
 To execute metadata extraction and usage workflow successfully the IAM User should have enough access to fetch required data. Following table describes the minimum required permissions

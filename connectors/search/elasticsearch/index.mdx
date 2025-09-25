@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="Elasticsearch"
 stage="PROD"
@@ -25,7 +27,7 @@ Configure and schedule Elasticsearch metadata workflow from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/search/elasticsearch/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/search/elasticsearch/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/search/elasticsearch/yaml" />
 
 ## Requirements
 

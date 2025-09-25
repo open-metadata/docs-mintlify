@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="MSSQL"
 stage="PROD"
@@ -37,7 +39,7 @@ Configure and schedule MSSQL metadata and profiler workflows from the OpenMetada
 - [Reverse Metadata](#reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/mssql/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/mssql/yaml" />
 
 ## Requirements
 

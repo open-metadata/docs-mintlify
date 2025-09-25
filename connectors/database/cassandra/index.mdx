@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Cassandra"
 stage="BETA"
@@ -28,7 +30,7 @@ Configure and schedule Cassandra metadata workflows from the OpenMetadata UI:
 - [Enable Security](#securing-cassandra-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/cassandra/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/cassandra/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/cassandra/yaml" />
 
 ## Requirements
 

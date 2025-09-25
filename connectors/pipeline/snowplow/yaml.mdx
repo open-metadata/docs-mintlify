@@ -16,6 +16,8 @@ import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
 
 import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="Snowplow"
 stage="BETA"
@@ -48,7 +50,7 @@ For self-hosted Community Edition deployments, you'll need:
 - **Configuration Path**: The path to your Snowplow configuration files
 - **Iglu Server URL** (optional): If you're using an Iglu Server for schema management
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/snowplow/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/snowplow/yaml" />
 
 ## Metadata Ingestion
 

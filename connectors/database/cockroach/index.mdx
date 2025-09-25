@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import ConfigureIngestion from '/snippets/connectors/database/configure-ingestion.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Cockroach"
 stage="BETA"
@@ -30,7 +32,7 @@ Configure and schedule Cockroach metadata workflows from the OpenMetadata UI:
 - [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [Troubleshooting](/connectors/database/cockroach/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/cockroach/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/cockroach/yaml" />
 
 ## Requirements
 

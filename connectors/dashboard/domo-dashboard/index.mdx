@@ -10,6 +10,8 @@ import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingesti
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="Domo"
   stage="PROD"
@@ -25,7 +27,7 @@ Configure and schedule DomoDashboard metadata and profiler workflows from the Op
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/dashboard/domo-dashboard/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/domo-dashboard/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/domo-dashboard/yaml" />
 
 ## Requirements
 

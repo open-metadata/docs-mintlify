@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="SAP HANA"
 stage="PROD"
@@ -33,7 +35,7 @@ Configure and schedule SAP HANA metadata and profiler workflows from the OpenMet
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/sap-hana/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/sap-hana/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/sap-hana/yaml" />
 
 ## Requirements
 

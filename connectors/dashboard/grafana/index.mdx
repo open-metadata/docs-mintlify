@@ -10,6 +10,8 @@ import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingesti
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Grafana"
 stage="BETA"
@@ -26,7 +28,7 @@ Configure and schedule Grafana metadata and profiler workflows from the OpenMeta
 - [Metadata Ingestion](#metadata-ingestion)
 
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/grafana/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/grafana/yaml" />
 
 ## Requirements
 

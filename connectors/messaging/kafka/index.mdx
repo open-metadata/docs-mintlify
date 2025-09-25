@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Kafka"
 stage="PROD"
@@ -25,7 +27,7 @@ Configure and schedule Kafka metadata and profiler workflows from the OpenMetada
 - [Enable Security](#securing-kafka-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/messaging/kafka/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/messaging/kafka/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/messaging/kafka/yaml" />
 
 ## Requirements
 

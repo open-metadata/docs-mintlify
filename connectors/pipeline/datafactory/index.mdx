@@ -9,6 +9,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Azure Data Factory"
 stage="PROD"
@@ -31,7 +33,7 @@ Configure and schedule Azure Data Factory metadata and profiler workflows from t
 - [Troubleshooting](/connectors/pipeline/datafactory/troubleshooting)
     - [Workflow Deployment Error](#workflow-deployment-error)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/datafactory/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/datafactory/yaml" />
 
 ## Requirements
 

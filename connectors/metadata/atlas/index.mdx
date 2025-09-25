@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Atlas"
 stage="PROD"
@@ -16,7 +18,7 @@ availableFeatures=["Metadata"]
 unavailableFeatures=[]
 / %}
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/metadata/atlas/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/metadata/atlas/yaml" />
 
 ## Requirements
 

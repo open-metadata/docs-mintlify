@@ -12,6 +12,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="Metabase"
   stage="PROD"
@@ -29,7 +31,7 @@ Configure and schedule Metabase metadata and profiler workflows from the OpenMet
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/metabase/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/metabase/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/metabase/yaml" />
 
 ## Requirements
 

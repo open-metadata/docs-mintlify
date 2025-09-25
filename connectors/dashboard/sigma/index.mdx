@@ -12,6 +12,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="Sigma"
   stage="PROD"
@@ -29,7 +31,7 @@ Configure and schedule Sigma metadata and profiler workflows from the OpenMetada
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/sigma/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/sigma/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/sigma/yaml" />
 
 ## Requirements
 

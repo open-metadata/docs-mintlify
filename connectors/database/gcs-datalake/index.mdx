@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="GCS Datalake"
 stage="PROD"
@@ -29,7 +31,7 @@ Configure and schedule GCS Datalake metadata and profiler workflows from the Ope
 - [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [Troubleshooting](/connectors/database/gcs-datalake/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/gcs-datalake/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/gcs-datalake/yaml" />
 
 ## Requirements
 

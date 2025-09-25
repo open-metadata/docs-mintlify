@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="MLflow"
 stage="PROD"
@@ -24,7 +26,7 @@ Configure and schedule MLflow metadata and profiler workflows from the OpenMetad
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/ml-model/mlflow/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/ml-model/mlflow/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/ml-model/mlflow/yaml" />
 
 ## Requirements
 

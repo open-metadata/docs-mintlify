@@ -12,6 +12,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="Redash"
   stage="PROD"
@@ -30,7 +32,7 @@ Configure and schedule Redash metadata and profiler workflows from the OpenMetad
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/redash/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/redash/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/redash/yaml" />
 
 ## Requirements
 

@@ -12,6 +12,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="Qlik Cloud"
   stage="PROD"
@@ -29,7 +31,7 @@ Configure and schedule QlikCloud metadata and profiler workflows from the OpenMe
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/qlikcloud/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/qlikcloud/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/qlikcloud/yaml" />
 
 ## Requirements
 

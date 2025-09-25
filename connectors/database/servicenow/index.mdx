@@ -13,6 +13,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="ServiceNow"
 stage="BETA"
@@ -28,7 +30,7 @@ Configure and schedule ServiceNow metadata workflows from the OpenMetadata UI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/servicenow/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/servicenow/yaml" />
 
 ## Requirements
 

@@ -24,6 +24,8 @@ import DataQuality from 'snippets/connectors/yaml/data-quality.mdx'
 
 import AwsConfigDef from 'snippets/connectors/yaml/common/aws-config-def.mdx'
 
+import AwsConfig from 'snippets/connectors/yaml/common/aws-config.mdx'
+
 {% connectorDetailsHeader
 name="Athena"
 stage="PROD"
@@ -244,7 +246,7 @@ source:
       awsConfig:
 ```
 
-<AwsConfigDef />
+<AwsConfig />
 
 ```yaml {% srNumber=9 %}
       s3StagingDir: s3 directory for datasource

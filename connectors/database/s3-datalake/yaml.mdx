@@ -22,6 +22,9 @@ import SourceConfigDef from 'snippets/connectors/yaml/database/source-config-def
 import SourceConfig from 'snippets/connectors/yaml/database/source-config.mdx'
 
 import AwsConfigDef from 'snippets/connectors/yaml/common/aws-config-def.mdx'
+
+import AwsConfig from 'snippets/connectors/yaml/common/aws-config.mdx'
+
 {% connectorDetailsHeader
 name="S3 Datalake"
 stage="PROD"
@@ -139,7 +142,7 @@ source:
         securityConfig: 
 ```
 
-<AwsConfigDef />
+<AwsConfig />
 
 ```yaml {% srNumber=1 %}
       bucketName: bucket name

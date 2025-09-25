@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Databricks"
 stage="PROD"
@@ -23,7 +25,7 @@ Configure and schedule Databricks Pipeline metadata workflows from the OpenMetad
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/pipeline/databricks-pipeline/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/databricks-pipeline/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/databricks-pipeline/yaml" />
 
 ## Metadata Ingestion
 

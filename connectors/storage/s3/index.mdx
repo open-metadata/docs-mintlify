@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="S3 Storage"
 stage="PROD"
@@ -24,7 +26,7 @@ Configure and schedule S3 metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/storage/s3/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/storage/s3/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/storage/s3/yaml" />
 
 ## Requirements
 

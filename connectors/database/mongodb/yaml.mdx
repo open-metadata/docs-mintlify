@@ -18,6 +18,8 @@ import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
 
 import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="MongoDB"
 stage="PROD"
@@ -34,7 +36,7 @@ Configure and schedule MongoDB metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Data Profiler](#data-profiler)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/mongodb/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/mongodb/yaml" />
 
 <ExternalIngestionDeployment />
 

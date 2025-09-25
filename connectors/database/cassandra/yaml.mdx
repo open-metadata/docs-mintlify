@@ -18,6 +18,8 @@ import IngestionSink from '/snippets/connectors/yaml/ingestion-sink.mdx'
 
 import WorkflowConfig from 'snippets/connectors/yaml/workflow-config.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="Cassandra"
 stage="BETA"
@@ -35,7 +37,7 @@ Configure and schedule Cassandra metadata workflows from the OpenMetadata UI:
 - [Enable Security](#securing-cassandra-connection-with-ssl-in-openmetadata)
 
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/cassandra/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/cassandra/yaml" />
 
 <ExternalIngestionDeployment />
 

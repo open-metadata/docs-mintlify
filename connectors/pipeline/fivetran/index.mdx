@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Fivetran"
 stage="PROD"
@@ -24,7 +26,7 @@ Configure and schedule Fivetran metadata and profiler workflows from the OpenMet
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/pipeline/fivetran/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/fivetran/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/fivetran/yaml" />
 
 ## Requirements
 

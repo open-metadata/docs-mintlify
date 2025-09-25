@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="SSIS"
 stage="BETA"
@@ -25,7 +27,7 @@ Configure and schedule SSIS metadata workflow from the OpenMetadata UI:
     - [Connection Details](#connection-details)
 - [Troubleshooting](/connectors/pipeline/ssis/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/ssis/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/ssis/yaml" />
 
 ## Requirements
 To extract SSIS metadata, we need the batabase connection details where the metadata is stored.

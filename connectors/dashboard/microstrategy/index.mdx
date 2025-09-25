@@ -10,6 +10,8 @@ import ConfigureIngestion from '/snippets/connectors/dashboard/configure-ingesti
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
   name="MicroStrategy"
   stage="PROD"
@@ -26,7 +28,7 @@ Configure and schedule MicroStrategy metadata and profiler workflows from the Op
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/dashboard/microstrategy/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/microstrategy/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/microstrategy/yaml" />
 
 ## Requirements
 

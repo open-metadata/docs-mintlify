@@ -12,6 +12,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Tableau"
 stage="PROD"
@@ -35,7 +37,7 @@ Configure and schedule Tableau metadata and profiler workflows from the OpenMeta
 - [Reverse Metadata](#reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/dashboard/tableau/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/dashboard/tableau/yaml" />
 
 ## Requirements
 

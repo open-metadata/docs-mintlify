@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import AdvancedConfiguration from '/snippets/connectors/database/advanced-configuration.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="Druid"
 stage="PROD"
@@ -31,7 +33,7 @@ Configure and schedule Druid metadata and profiler workflows from the OpenMetada
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/druid/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/database/athena/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/database/athena/yaml" />
 
 ## Metadata Ingestion
 

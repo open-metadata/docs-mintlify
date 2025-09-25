@@ -8,6 +8,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
+
 {% connectorDetailsHeader
 name="Wherescape"
 stage="BETA"
@@ -25,7 +27,7 @@ Configure and schedule Wherescape metadata workflow from the OpenMetadata UI:
     - [Connection Details](#connection-details)
 - [Troubleshooting](/connectors/pipeline/wherescape/troubleshooting)
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/pipeline/wherescape/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/pipeline/wherescape/yaml" />
 
 ## Requirements
 To extract Wherescape metadata, we need the batabase connection details where the metadata is stored.

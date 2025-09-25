@@ -10,6 +10,8 @@ import TestConnection from '/snippets/connectors/test-connection.mdx'
 
 import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-and-deploy.mdx'
 
+import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
+
 {% connectorDetailsHeader
 name="AlationSink"
 stage="PROD"
@@ -18,7 +20,7 @@ availableFeatures=["Metadata"]
 unavailableFeatures=[]
 / %}
 
-{% partial file="/v1.9/connectors/ingestion-modes-tiles.mdx" variables={yamlPath: "/connectors/metadata/alationsink/yaml"} /%}
+<IngestionModeTiles yamlPath="/snippets/connectors/metadata/alationsink/yaml" />
 
 {% note %}
 The connector will ingest data from OpenMetadata into Alation.

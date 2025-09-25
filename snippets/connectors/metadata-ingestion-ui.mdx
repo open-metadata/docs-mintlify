@@ -47,14 +47,14 @@ Click on _Add New Service_ to start the Service creation.
 
 {% stepDescription title="3. Select the Service Type" %}
 
-Select {connector} as the Service type and click _Next_.
+Select {% $connector %} as the Service type and click _Next_.
 
 {% /stepDescription %}
 
 {% stepVisualInfo %}
 
 {% image
-  src={selectServicePath}
+  src=$selectServicePath
   alt="Select Service"
   caption="Select your Service from the list" /%}
 
@@ -72,7 +72,7 @@ Provide a name and description for your Service.
 
 OpenMetadata uniquely identifies Services by their **Service Name**. Provide
 a name that distinguishes your deployment from other Services, including
-the other {connector} Services that you might be ingesting metadata
+the other {% $connector %} Services that you might be ingesting metadata
 from.
 
 Note that when the name is set, it cannot be changed.
@@ -82,7 +82,7 @@ Note that when the name is set, it cannot be changed.
 {% stepVisualInfo %}
 
 {% image
-  src={addNewServicePath}
+  src=$addNewServicePath
   alt="Add New Service"
   caption="Provide a Name and description for your Service" /%}
 
@@ -94,7 +94,7 @@ Note that when the name is set, it cannot be changed.
 
 {% stepDescription title="5. Configure the Service Connection" %}
 
-In this step, we will configure the connection settings required for {connector}.
+In this step, we will configure the connection settings required for {% $connector %}.
 
 Please follow the instructions below to properly configure the Service to read from your sources. You will also find 
 helper documentation on the right-hand side panel in the UI.
@@ -104,7 +104,7 @@ helper documentation on the right-hand side panel in the UI.
 {% stepVisualInfo %}
 
 {% image
-  src={serviceConnectionPath}
+  src=$serviceConnectionPath
   alt="Configure Service connection"
   caption="Configure the Service connection by filling the form" /%}
 

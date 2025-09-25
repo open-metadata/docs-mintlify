@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Glue"
 stage="PROD"
@@ -38,15 +40,7 @@ User must have `glue:GetDatabases` and `glue:GetTables` permissions to ingest th
 
 ## Metadata Ingestion
 
-{% partial
-file="/v1.9/connectors/metadata-ingestion-ui.mdx"
-variables={
-connector: "Glue",
-selectServicePath: "/images/v1.9/connectors/glue/select-service.png",
-addNewServicePath: "/images/v1.9/connectors/glue/add-new-service.png",
-serviceConnectionPath: "/images/v1.9/connectors/glue/service-connection.png",
-}
-/%}
+<MetadataIngestionUi connector={"Glue"} selectServicePath={"/images/connectors/glue/select-service.png"} addNewServicePath={"/images/connectors/glue/add-new-service.png"} serviceConnectionPath={"/images/connectors/glue/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

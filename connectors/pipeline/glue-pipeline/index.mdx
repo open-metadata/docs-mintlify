@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from '/snippets/connectors/ingestion-modes-tiles.mdx'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Glue"
 stage="PROD"
@@ -41,15 +43,7 @@ The user must have the following permissions for the ingestion to run successful
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Glue Pipeline", 
-    selectServicePath: "/images/v1.9/connectors/gluepipeline/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/gluepipeline/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/gluepipeline/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Glue Pipeline"} selectServicePath={"/images/connectors/glue-pipeline/select-service.png"} addNewServicePath={"/images/connectors/glue-pipeline/add-new-service.png"} serviceConnectionPath={"/images/connectors/glue-pipeline/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

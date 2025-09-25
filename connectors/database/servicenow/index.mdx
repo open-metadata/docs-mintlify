@@ -15,6 +15,8 @@ import AdvancedConfiguration from '/snippets/connectors/database/advanced-config
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="ServiceNow"
 stage="BETA"
@@ -42,15 +44,7 @@ To fetch metadata from ServiceNow into OpenMetadata you will need:
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "ServiceNow", 
-    selectServicePath: "/images/v1.9/connectors/servicenow/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/servicenow/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/servicenow/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"ServiceNow"} selectServicePath={"/images/connectors/servicenow/select-service.png"} addNewServicePath={"/images/connectors/servicenow/add-new-service.png"} serviceConnectionPath={"/images/connectors/servicenow/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="dbt Cloud"
 stage="PROD"
@@ -55,15 +57,7 @@ To know more about permissions required refer [here](https://docs.getdbt.com/doc
 
 ## Metadata Ingestion
 
-{% partial 
-    file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-    variables={
-        connector: "DBTCloud", 
-        selectServicePath: "/images/v1.9/connectors/dbtcloud/select-service.png",
-        addNewServicePath: "/images/v1.9/connectors/dbtcloud/add-new-service.png",
-        serviceConnectionPath: "/images/v1.9/connectors/dbtcloud/service-connection.png",
-    } 
-/%}
+<MetadataIngestionUi connector={"DBT Cloud"} selectServicePath={"/images/connectors/dbtcloud/select-service.png"} addNewServicePath={"/images/connectors/dbtcloud/add-new-service.png"} serviceConnectionPath={"/images/connectors/dbtcloud/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

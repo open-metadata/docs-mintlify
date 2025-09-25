@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Airbyte"
 stage="PROD"
@@ -29,15 +31,7 @@ Configure and schedule Airbyte metadata and profiler workflows from the OpenMeta
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Airbyte", 
-    selectServicePath: "/images/v1.9/connectors/airbyte/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/airbyte/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/airbyte/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Airbyte"} selectServicePath={"/images/connectors/airbyte/select-service.png"} addNewServicePath={"/images/connectors/airbyte/add-new-service.png"} serviceConnectionPath={"/images/connectors/airbyte/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

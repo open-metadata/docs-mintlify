@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Flink"
 stage="BETA"
@@ -44,15 +46,7 @@ The ingestion framework uses flink REST APIs to connect to the instance and perf
 
 ## Metadata Ingestion
 
-{% partial 
-    file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-    variables={
-        connector: "KafkaConnect", 
-        selectServicePath: "/images/v1.9/connectors/flink/select-new-service.webp",
-        addNewServicePath: "/images/v1.9/connectors/flink/add-new-service.webp",
-        serviceConnectionPath: "/images/v1.9/connectors/flink/service-connection.webp",
-    } 
-/%}
+<MetadataIngestionUi connector={"Flink"} selectServicePath={"/images/connectors/flink/select-service.png"} addNewServicePath={"/images/connectors/flink/add-new-service.png"} serviceConnectionPath={"/images/connectors/flink/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

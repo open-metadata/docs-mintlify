@@ -12,6 +12,8 @@ import ConfigureIngestion from '/snippets/connectors/database/configure-ingestio
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="SSAS"
 stage="BETA"
@@ -45,15 +47,7 @@ These steps are necessary to allow the connector to communicate with your SSAS i
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "SSAS", 
-    selectServicePath: "/images/v1.9/connectors/ssas/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/ssas/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/ssas/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"SSAS"} selectServicePath={"/images/connectors/ssas/select-service.png"} addNewServicePath={"/images/connectors/ssas/add-new-service.png"} serviceConnectionPath={"/images/connectors/ssas/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

@@ -14,6 +14,8 @@ import AdvancedConfiguration from '/snippets/connectors/database/advanced-config
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Teradata"
 stage="BETA"
@@ -47,15 +49,7 @@ Connector was tested on Teradata DBS version 17.20. Since there are no significa
 
 By default, all valid users in Teradata DB has full access to metadata objects, so there are no any specific requirements to user privileges.
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Teradata", 
-    selectServicePath: "/images/v1.9/connectors/teradata/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/teradata/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/teradata/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Teradata"} selectServicePath={"/images/connectors/teradata/select-service.png"} addNewServicePath={"/images/connectors/teradata/add-new-service.png"} serviceConnectionPath={"/images/connectors/teradata/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

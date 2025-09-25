@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Atlas"
 stage="PROD"
@@ -34,29 +36,13 @@ we will use it to create Atlas Service.
 
 For example, to create a Hive Service you can follow these steps:
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Hive", 
-    selectServicePath: "/images/v1.9/connectors/hive/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/hive/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/hive/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Atlas"} selectServicePath={"/images/connectors/atlas/select-service.png"} addNewServicePath={"/images/connectors/atlas/add-new-service.png"} serviceConnectionPath={"/images/connectors/atlas/service-connection.png"} />
 
 ## 2. Atlas Metadata Ingestion
 
 Then, prepare the Atlas Service and configure the Ingestion:
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Atlas", 
-    selectServicePath: "/images/v1.9/connectors/atlas/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/atlas/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/atlas/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Atlas"} selectServicePath={"/images/connectors/atlas/select-service.png"} addNewServicePath={"/images/connectors/atlas/add-new-service.png"} serviceConnectionPath={"/images/connectors/atlas/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

@@ -14,6 +14,8 @@ import DashboardLineage from '/snippets/connectors/dashboard/dashboard-lineage.m
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
   name="Redash"
   stage="PROD"
@@ -42,15 +44,7 @@ permissions, please visit Redash documentation [here](https://redash.io/help/use
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Redash", 
-    selectServicePath: "/images/v1.9/connectors/redash/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/redash/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/redash/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Redash"} selectServicePath={"/images/connectors/redash/select-service.png"} addNewServicePath={"/images/connectors/redash/add-new-service.png"} serviceConnectionPath={"/images/connectors/redash/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

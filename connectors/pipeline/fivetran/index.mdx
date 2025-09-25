@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Fivetran"
 stage="PROD"
@@ -34,15 +36,7 @@ To access Fivetran APIs, a Fivetran account on a Standard, Enterprise, or Busine
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Fivetran", 
-    selectServicePath: "/images/v1.9/connectors/fivetran/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/fivetran/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/fivetran/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Fivetran"} selectServicePath={"/images/connectors/fivetran/select-service.png"} addNewServicePath={"/images/connectors/fivetran/add-new-service.png"} serviceConnectionPath={"/images/connectors/fivetran/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

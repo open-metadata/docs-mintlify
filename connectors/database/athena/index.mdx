@@ -14,6 +14,8 @@ import AdvancedConfiguration from '/snippets/connectors/database/advanced-config
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Athena"
 stage="PROD"
@@ -156,15 +158,7 @@ If you have external services other than glue and facing permission issues, add 
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Athena", 
-    selectServicePath: "/images/v1.9/connectors/athena/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/athena/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/athena/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Athena"} selectServicePath={"/images/connectors/athena/select-service.png"} addNewServicePath={"/images/connectors/athena/add-new-service.png"} serviceConnectionPath={"/images/connectors/athena/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}

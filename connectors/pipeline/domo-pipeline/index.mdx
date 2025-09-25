@@ -10,6 +10,8 @@ import IngestionScheduleAndDeploy from '/snippets/connectors/ingestion-schedule-
 
 import IngestionModeTiles from \'/snippets/connectors/ingestion-modes-tiles.mdx\'
 
+import MetadataIngestionUi from '/snippets/connectors/metadata-ingestion-ui.mdx'
+
 {% connectorDetailsHeader
 name="Domo"
 stage="PROD"
@@ -35,15 +37,7 @@ For questions related to scopes, click [here](https://developer.domo.com/portal/
 
 ## Metadata Ingestion
 
-{% partial 
-  file="/v1.9/connectors/metadata-ingestion-ui.mdx" 
-  variables={
-    connector: "Domo Pipeline", 
-    selectServicePath: "/images/v1.9/connectors/domopipeline/select-service.png",
-    addNewServicePath: "/images/v1.9/connectors/domopipeline/add-new-service.png",
-    serviceConnectionPath: "/images/v1.9/connectors/domopipeline/service-connection.png",
-} 
-/%}
+<MetadataIngestionUi connector={"Domo Pipeline"} selectServicePath={"/images/connectors/domo-pipeline/select-service.png"} addNewServicePath={"/images/connectors/domo-pipeline/add-new-service.png"} serviceConnectionPath={"/images/connectors/domo-pipeline/service-connection.png"} />
 
 {% stepsContainer %}
 {% extraContent parentTagName="stepsContainer" %}
